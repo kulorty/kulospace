@@ -1,10 +1,119 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>my web</title>
-    </head>
-    <body>
-        <a href="详情/3.7 第一次作业.html">3.7 第一次作业</a><br>
-        <a href="详情/第二课堂项目/index.html">第二课堂项目</a>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>作业展示</title>
+    <link rel="icon" href="picture/touxiang.icon" type="image/x-icon" />
+    <style>
+        body{
+            background-image: url("picture/background.jpg");
+            background-size: 100%;
+        }
+        .content {
+            background-color: rgba(255, 255, 255, 0.85);
+            height: 100%;
+            width: 1040px;
+            margin: 0 auto;
+            padding: 30px; 
+        }
+
+        .pgm {
+            width: 320px;
+            height: 185px;
+            display: inline-block;
+            border: 1px black solid;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 16px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        a {
+            cursor: pointer;
+            text-decoration: none;
+            color: black;
+        }
+
+        img {
+            width: 320px;
+            height: 160px;
+        }
+
+        img:hover {
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        p {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 4px;
+            margin: 0;
+        }
+
+        p::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        p:hover::before {
+            width: 0;
+            right: 0;
+        }
+
+        p::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            width: 0;
+            background-color: black;
+            transition: all 0.3s ease-in-out;
+        }
+
+        p:hover::after {
+            width: 100%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <div class="pgm">
+            <a href="详情/3.7 第一次作业.html">
+                <div style="width: 320px;height: 160px;overflow: hidden;">
+                    <img src="picture/suo1.png">
+                </div>
+                <p>3.7 第一次作业</p>
+            </a>
+        </div>
+        <div class="pgm">
+            <a href="详情/第二课堂项目/index.html">
+                <div style="width: 320px;height: 160px;overflow: hidden;">
+                    <img src="picture/suo2.png">
+                </div>
+                <p>第二课堂项目</p>
+            </a>
+        </div>
+        <div class="pgm">
+            <a href="详情/第二课堂项目/index.html">
+                <div style="width: 320px;height: 160px;overflow: hidden;">
+                    <img src="picture/suo2.png">
+                </div>
+                <p>第二课堂项目</p>
+            </a>
+        </div>
+    </div>
+</body>
+
 </html>
