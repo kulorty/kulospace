@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 
 <head>
     <meta charset="UTF-8">
@@ -109,19 +109,39 @@
             margin: 0 auto;
             display: flex;
         }
+
+        #loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            background-color: #7EAACC;
+            opacity: 1;
+            visibility: visible;
+            transition: opacity 1.8s, visibility 1.8s, transform 1.8s;
+        }
+
+        #loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+        }
     </style>
 </head>
 
 <body>
-    <audio preload autoplay loop id="vd">
-        <source src="otherside.mp3" type="audio/mpeg">
-    </audio>
+    <div id="loading">
+        <img src="picture/loading.gif" style="width: 480px;height: 480px;margin:50px auto;display: flex;">
+        <img src="picture/start.png" style="margin: -90px auto;display: flex;">
+    </div>
     <img class="title" src="picture/title.png">
     <div class="main">
         <img class="bookbg" src="picture/bookbg.png">
         <div class="content">
             <div class="pgm">
-                <a href="详情/第一次作业.html">
+                <a href="详情/第一次作业.html" target="_blank">
                     <div style="width: 250px;height: 130px;overflow: hidden;">
                         <img class="suo" src="picture/suo1.png">
                     </div>
@@ -129,7 +149,7 @@
                 </a>
             </div>
             <div class="pgm">
-                <a href="详情/第二课堂项目/index.html">
+                <a href="详情/第二课堂项目/index.html" target="_blank">
                     <div style="width: 250px;height: 130px;overflow: hidden;">
                         <img class="suo" src="picture/suo2.png">
                     </div>
@@ -137,7 +157,7 @@
                 </a>
             </div>
             <div class="pgm">
-                <a href="详情/第二次作业.html">
+                <a href="详情/第二次作业.html" target="_blank">
                     <div style="width: 250px;height: 130px;overflow: hidden;">
                         <img class="suo" src="picture/suo1.png">
                     </div>
@@ -146,23 +166,28 @@
             </div>
         </div>
     </div>
+
     <audio preload autoplay loop id="vd">
         <source src="otherside.mp3" type="audio/mpeg">
     </audio>
-</body>
-<script type="text/javascript">
-    window.onload = function () {
-        setInterval("toggleSound()", 100);
-    }
-
-    function toggleSound() {
-        var music = document.getElementById("vd");//获取ID  
-
-        if (music.paused) { //判读是否播放  
-            music.paused = false;
-            music.play(); //没有就播放 
+    <script type="text/javascript">
+        window.onload = function () {
+            setInterval("toggleSound()", 10);
         }
-    }
-</script>
+
+        function toggleSound() {
+            var music = document.getElementById("vd");//获取ID  
+
+            if (music.paused) { //判读是否播放  
+                music.paused = false;
+                music.play(); //没有就播放 
+            }
+        }
+        document.getElementById("loading").addEventListener("click", function () {
+            this.classList.add("hidden");
+        });
+    </script>
+
+</body>
 
 </html>
