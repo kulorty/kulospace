@@ -17,8 +17,9 @@
             width: 807px;
             margin: 0 auto;
             padding-top: 80px;
+            display: flex;
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
 
         .pgm {
@@ -94,45 +95,55 @@
             padding-top: 30px;
             padding-bottom: 20px;
         }
-        .bookbg{
-            width:1050px;
+
+        .bookbg {
+            width: 1050px;
             height: 900px;
-            left: 15.55%;
             z-index: -3;
             position: absolute;
+        }
+
+        .main {
+            width: 1050px;
+            height: 900px;
+            margin: 0 auto;
+            display: flex;
         }
     </style>
 </head>
 
 <body>
     <img class="title" src="picture/title.png">
-    <img class="bookbg" src="picture/bookbg.png">
-    <div class="content">
-        <div class="pgm">
-            <a href="详情/第一次作业.html">
-                <div style="width: 250px;height: 130px;overflow: hidden;">
-                    <img class="suo" src="picture/suo1.png">
-                </div>
-                <p>第一次作业</p>
-            </a>
-        </div>
-        <div class="pgm">
-            <a href="详情/第二课堂项目/index.html">
-                <div style="width: 250px;height: 130px;overflow: hidden;">
-                    <img class="suo" src="picture/suo2.png">
-                </div>
-                <p>第二课堂项目</p>
-            </a>
-        </div>
-        <div class="pgm">
-            <a href="详情/第二次作业.html">
-                <div style="width: 250px;height: 130px;overflow: hidden;">
-                    <img class="suo" src="picture/suo1.png">
-                </div>
-                <p>第二次作业</p>
-            </a>
+    <div class="main">
+        <img class="bookbg" src="picture/bookbg.png">
+        <div class="content">
+            <div class="pgm">
+                <a href="详情/第一次作业.html">
+                    <div style="width: 250px;height: 130px;overflow: hidden;">
+                        <img class="suo" src="picture/suo1.png">
+                    </div>
+                    <p>第一次作业</p>
+                </a>
+            </div>
+            <div class="pgm">
+                <a href="详情/第二课堂项目/index.html">
+                    <div style="width: 250px;height: 130px;overflow: hidden;">
+                        <img class="suo" src="picture/suo2.png">
+                    </div>
+                    <p>第二课堂项目</p>
+                </a>
+            </div>
+            <div class="pgm">
+                <a href="详情/第二次作业.html">
+                    <div style="width: 250px;height: 130px;overflow: hidden;">
+                        <img class="suo" src="picture/suo1.png">
+                    </div>
+                    <p>第二次作业</p>
+                </a>
+            </div>
         </div>
     </div>
+
     <audio preload autoplay loop id="vd">
         <source src="otherside.mp3" type="audio/mpeg">
     </audio>
