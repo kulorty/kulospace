@@ -6,28 +6,31 @@
     <title>作业展示</title>
     <link rel="icon" href="picture/touxiang.ico" type="image/x-icon" />
     <style>
-        body{
+        body {
             background-image: url("picture/background.jpg");
             background-size: 100%;
+            background-attachment: fixed
         }
+
         .content {
-            background-color: rgba(255, 255, 255, 0.85);
             height: 100%;
-            width: 1040px;
+            width: 807px;
             margin: 0 auto;
-            padding: 30px;
+            padding-top: 80px;
+            position: relative;
+            z-index: 2;
         }
 
         .pgm {
-            width: 320px;
-            height: 185px;
+            width: 250px;
+            height: 155px;
             display: inline-block;
             border: 1px black solid;
             border-radius: 10px;
             text-align: center;
             font-size: 16px;
             padding: 5px;
-            margin: 5px;
+            margin: 2px;
         }
 
         a {
@@ -37,8 +40,8 @@
         }
 
         .suo {
-            width: 320px;
-            height: 160px;
+            width: 250px;
+            height: 130px;
         }
 
         .suo:hover {
@@ -49,7 +52,7 @@
         p {
             position: relative;
             display: inline-block;
-            padding-bottom: 4px;
+            padding-bottom: 2px;
             margin: 0;
         }
 
@@ -84,32 +87,38 @@
             width: 100%;
             left: 0;
         }
-        .title{
+
+        .title {
             margin: 0 auto;
             display: flex;
-            padding-top:30px;
-            padding-bottom:20px;
+            padding-top: 30px;
+            padding-bottom: 20px;
+        }
+        .bookbg{
+            width:1050px;
+            height: 900px;
+            left: 15.55%;
+            z-index: -3;
+            position: absolute;
         }
     </style>
 </head>
 
 <body>
-    <audio preload autoplay loop id="vd">
-        <source src="otherside.mp3" type="audio/mpeg">
-    </audio>
     <img class="title" src="picture/title.png">
+    <img class="bookbg" src="picture/bookbg.png">
     <div class="content">
         <div class="pgm">
             <a href="详情/第一次作业.html">
-                <div style="width: 320px;height: 160px;overflow: hidden;">
+                <div style="width: 250px;height: 130px;overflow: hidden;">
                     <img class="suo" src="picture/suo1.png">
                 </div>
-                <p>3.7 第一次作业</p>
+                <p>第一次作业</p>
             </a>
         </div>
         <div class="pgm">
             <a href="详情/第二课堂项目/index.html">
-                <div style="width: 320px;height: 160px;overflow: hidden;">
+                <div style="width: 250px;height: 130px;overflow: hidden;">
                     <img class="suo" src="picture/suo2.png">
                 </div>
                 <p>第二课堂项目</p>
@@ -117,27 +126,30 @@
         </div>
         <div class="pgm">
             <a href="详情/第二次作业.html">
-                <div style="width: 320px;height: 160px;overflow: hidden;">
+                <div style="width: 250px;height: 130px;overflow: hidden;">
                     <img class="suo" src="picture/suo1.png">
                 </div>
-                <p>3.7 第二次作业</p>
+                <p>第二次作业</p>
             </a>
         </div>
     </div>
-    
+    <audio preload autoplay loop id="vd">
+        <source src="otherside.mp3" type="audio/mpeg">
+    </audio>
 </body>
 <script type="text/javascript">
-    window.onload = function(){
-             setInterval("toggleSound()",100);
-        }
+    window.onload = function () {
+        setInterval("toggleSound()", 100);
+    }
 
     function toggleSound() {
-                var music = document.getElementById("vd");//获取ID  
-                    
-                if (music.paused) { //判读是否播放  
-                    music.paused=false;
-                    music.play(); //没有就播放 
-                }    
+        var music = document.getElementById("vd");//获取ID  
+
+        if (music.paused) { //判读是否播放  
+            music.paused = false;
+            music.play(); //没有就播放 
         }
+    }
 </script>
+
 </html>
