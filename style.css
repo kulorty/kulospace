@@ -9,7 +9,9 @@ body {
 	width: 807px;
 	margin: 0 auto;
 	padding-top: 80px;
+	flex-wrap: wrap;
 	display: flex;
+	align-content: flex-start;
 	position: relative;
 	z-index: 3;
 }
