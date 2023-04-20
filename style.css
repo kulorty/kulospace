@@ -12,6 +12,7 @@ body {
 	flex-wrap: wrap;
 	display: flex;
 	align-content: flex-start;
+    justify-content: flex-start；
 	position: relative;
 	z-index: 3;
 }
