@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .prompt {
+            margin-top: 50px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>检查用户名</h1>
+    <input type="text" id="username-input" placeholder="输入用户名">
+    <button id="check-button">检查</button>
+    <div>检查结果：</div>
+    <span id="result"></span>
+    <div class="prompt">
+        <p>存在的用户名有：赵大、钱二、孙三、李四、周五、吴六、郑七、王八、冯九、陈十、</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 219971320刘桂宏 -->
+    <script>
+        $(document).ready(function () {
+            $('#check-button').click(function () {
+                var username = $('#username-input').val();  // 获取输入的用户名
+
+                $.ajax({
+                    url: "https://mock.apifox.cn/m1/2846393-0-3eb5ca05/name/" + username,
+                    type: "GET",
+                    success: function (response) {
+                        var users = response;  // 接口返回的用户数据
+
+                        // 遍历用户数据，判断输入的用户名是否存在
+                        var usernameExists = false;
+                        for (var key in users) {
+                            if (users.hasOwnProperty(key) && users[key].username === username) {
+                                usernameExists = true;
+                                break;
+                            }
+                        }
+
+                        // 显示结果信息
+                        if (usernameExists) {
+                            $('#result').text("用户名存在！");
+                        } else {
+                            $('#result').text("用户名不存在！");
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        $('#result').text("请求接口时出错：" + error);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

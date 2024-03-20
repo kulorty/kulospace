@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>第二次作业</title>
+    <!-- 219971320刘桂宏 -->
+</head>
+
+<body>
+    <script type="text/javascript">
+        var pos = prompt("请输入行数（整数）");
+        for (var i = 1; ; i++) {
+            if (pos % 2 == 0) {
+                alert("请输入奇数");
+                pos = prompt("请输入行数（整数）");
+            } else {
+                break;
+            }
+        }
+
+        //三角形
+        var i, j;
+        for (i = 1; i <= pos; i++) {
+            for (j = 1; j <= pos - i; j++) {
+                document.write("&nbsp;");
+            }
+            for (j = 1; j <= i; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+        //平行四边形
+        for (i = 1; i <= pos; i++) {
+            for (j = 1; j <= pos - i; j++) {
+                document.write("&nbsp;");
+            }
+            for (j = 1; j <= pos; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+
+
+        for (i = 1; i <= pos / 2 + 1; i++) {
+            for (j = 1; j <= (pos / 2 + 1) - i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (j = 1; j <= 2 * i - 1; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+        for (i = pos / 2; i >= 1; i--) {
+            for (j = 1; j <= (pos / 2 + 1) - i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (j = 1; j <= 2 * i - 2; j++) {
+                document.write("* ");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+
+</html>
