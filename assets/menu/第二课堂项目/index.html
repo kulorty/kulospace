@@ -1,0 +1,1555 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://apis.google.com;">
+	<title>第二课堂项目</title>
+	<!-- <link rel="stylesheet" href="css/components.css"> -->
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/appp.css">
+</head>
+
+<body>
+	<div class="uisheji">
+		<!-- 主页begin -->
+		<div id="page-1" class="page">
+			<div class="idx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<!-- 状态栏begin -->
+					<div class="flex-row justify-end items-center section_1 space-x-18-reverse pos">
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="images_2" src="images\status bar\天气.png" />
+						</div>
+						<div class="flex-col justify-start"><span class="font_1 text">14°</span></div>
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="images_2" src="images\status bar\蓝牙.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="images_3" src="images\status bar\wifi.png" />
+						</div>
+					</div>
+					<!-- 状态栏end -->
+					<!-- 控制中心begin -->
+					<div class="flex-col group_10 pos_2">
+						<div class="flex-row justify-between section_4">
+							<img class="self-center image_15" src="images\control center\16778991003041869296.png" />
+							<div class="flex-row items-center relative group_2 space-x-64">
+								<img class="image_16" src="images\control center\空调.png" />
+								<img class="image_14" src="images\control center\风扇.png" />
+								<img class="image_16" src="images\control center\车巴巴-座椅配置.png" />
+							</div>
+							<!-- 更多 -->
+							<img class="self-center image_16 image_18" src="images\control center\更多.png" />
+						</div>
+						</a>
+						<!-- 控制中心end -->
+						<div class="flex-col relative group_9 space-y-202">
+							<div class="flex-row group_5">
+								<!-- 时间begin -->
+								<div class="flex-col items-start shrink-0 self-center space-y-20">
+									<span class="text_2" id="time">12:00</span>
+									<span class="font_1 text_4" id="time">2023年2月22日 星期三</span>
+								</div>
+								<!-- 时间end -->
+								<!-- 天气图标begin -->
+								<div class="flex-col justify-start items-start shrink-0 relative group_1">
+									<img class="image_5" src="images\weather\16778991010520209185.png" />
+									<img class="image_4 pos_1" src="images\weather\16778991079741724721.png" />
+									<img class="image_6 pos_6" src="images\weather\16778991079726758497.png" />
+								</div>
+								<!-- 天气图标end -->
+								<!-- 天气信息begin -->
+								<div class="self-start group">
+									<span class="text_3">14°</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">多云</span>
+								</div>
+								<!-- 天气信息end -->
+							</div>
+							<!-- 应用图标begin -->
+							<div class="flex-row justify-between">
+								<div class="flex-col justify-start items-center image-wrapper_2">
+									<img class="image_8" src="images\app\图片，照片.png" />
+								</div>
+								<div class="flex-col justify-start relative group_8">
+									<a href="导航.html">
+										<div class="section_2"></div>
+										<img class="image_9 pos_15" src="images\app\目标，导航.png" />
+									</a>
+								</div>
+								<div class="flex-col justify-start items-center image-wrapper_3">
+									<img class="image_7" src="images\app\电话.png" />
+								</div>
+								<div class="flex-col justify-start relative group_7">
+									<div class="section_3"></div>
+									<div class="flex-row group_4 space-x-24 pos_11">
+										<img class="image_12" src="images\app\网易云音乐.png" />
+										<img class="image_13" src="images\app\抖音.png" />
+										<img class="image_12" src="images\app\微信.png" />
+										<img class="image_11" src="images\app\Chrome.png" />
+										<img class="image_13" src="images\app\地图.png" />
+									</div>
+								</div>
+								<div class="flex-col justify-start items-center image-wrapper_4">
+									<img class="image_10" src="images\app\商店，店铺.png" />
+								</div>
+							</div>
+							<!-- 应用图标end -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 右翻一页 -->
+			<div id="you1" class="transition" data-to="page-0" data-transition="horizontal-easing-reverse"></div>
+			<!-- 左翻一页 -->
+			<div id="zuo1" class="transition" data-to="page-2" data-transition="horizontal-easing"></div>
+			<!-- 上翻1 -->
+			<div id="shang1" class="transition" data-to="page-4" data-transition="vertical-easing-reverse"></div>
+			<!-- 上翻2 -->
+			<div id="shang2" class="transition" data-to="page-5" data-transition="vertical-easing-reverse"></div>
+			<!-- 跳转到应用打开界面 -->
+			<div id="jinruyy" class="transition" data-to="page-12" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 主页end -->
+
+		<!-- 汽车控制系统begin -->
+		<div id="page-2" class="page">
+			<div class="qckzxt">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="shrink-0 image" src="images\16779081649670308786.png" />
+					<img class="shrink-0 image_14 pos_25" src="./images/qichekongzhixitong/mengban1.png" />
+					<img class="shrink-0 image_15 pos_26" src="./images/qichekongzhixitong/mengban2.png" />
+					<span class="font_4 text_5 pos_29">天气</span>
+					<span class="font_3 pos_48">风速</span>
+					<span class="font_1 text_10 pos_45">3</span>
+					<span class="font_2 text_11 pos_47">Km/h</span>
+					<span class="font_3 pos_38">湿度</span>
+					<span class="font_1 text_7 pos_36">30%</span>
+					<span class="font_3 text_12 pos_49">降水</span>
+					<span class="font_1 pos_46">15%</span>
+					<span class="font_3 pos_37">外部</span>
+					<span class="font_1 text_6 pos_35">14</span>
+					<div class="shrink-0 section_5 pos_34"></div>
+					<div class="shrink-0 section_6 pos_41"></div>
+					<span class="font_4 text_4 pos_28">音乐</span>
+					<img class="shrink-0 image_28 pos_52" src="./images/qichekongzhixitong/jian.png" />
+					<img class="shrink-0 image_27 pos_51" src="./images/qichekongzhixitong/jia.png" />
+					<img class="shrink-0 image_26 pos_50" src="./images/qichekongzhixitong/yinliang.png" />
+					<img class="shrink-0 image_16 pos_27" src="./images/qichekongzhixitong/xiexian.png" />
+					<div class="flex-col section_4 pos_33">
+						<img class="self-center image_20" src="./images/qichekongzhixitong/bofang.png" />
+						<div class="flex-col justify-start items-start divider">
+							<img class="image_23" src="./images/qichekongzhixitong/jingzhunjindu.png" />
+						</div>
+						<span class="self-center text_8">乌梅子酱</span>
+						<span class="self-center text_9">李荣浩</span>
+					</div>
+					<img class="shrink-0 image_22 pos_40" src="./images/qichekongzhixitong/xiayiqu.png" />
+					<img class="shrink-0 image_21 pos_39" src="./images/qichekongzhixitong/shangyiqu.png" />
+					<span class="font_2 text_13 pos_53">80</span>
+					<span class="font_3 pos_21">剩下的</span>
+					<span class="font_3 pos_22">旅行</span>
+					<span class="font_3 pos_23">剩下的</span>
+					<span class="font_1 text pos_16">85%</span>
+					<span class="font_2 text_2 pos_19">30 KM</span>
+					<span class="font_2 text_3 pos_20">610 KM</span>
+					<img class="shrink-0 image_8 pos_12" src="./images/qichekongzhixitong/youliangshengyu.png" />
+					<div class="flex-col justify-start items-start image-wrapper pos_2">
+						<img class="che" src="./images/qichekongzhixitong/che.png" />
+						<img class="image_12" src="./images/qichekongzhixitong/youbiao.png" />
+					</div>
+					<img class="shrink-0 image_13 pos_24" src="./images/qichekongzhixitong/mengban3.png" />
+					<div class="flex-row justify-center items-center section_3 pos_10">
+						<div class="flex-col justify-start items-center image-wrapper_3 pos_13">
+							<img class="image_10" src="./images/qichekongzhixitong/zuo1.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper_3">
+							<img class="image_11" src="./images/qichekongzhixitong/w3.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper_3 pos_11">
+							<img class="image_10" src="./images/qichekongzhixitong/you1.png" />
+						</div>
+					</div>
+					<div class="flex-row justify-center items-center section_3 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_3 pos_17">
+							<img class="image_10" src="./images/qichekongzhixitong/zuo1.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper_3">
+							<img class="image_11" src="./images/qichekongzhixitong/w3.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper_3 pos_18">
+							<img class="image_10" src="./images/qichekongzhixitong/you1.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_14">
+						<img class="image_9" src="./images/qichekongzhixitong/ASR.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_9">
+						<img class="image_9" src="./images/qichekongzhixitong/ABS.png" />
+					</div>
+					<img class="shrink-0 image_2 pos_3" src="./images/qichekongzhixitong/9.png" />
+					<img class="shrink-0 image_2 pos_4" src="./images/qichekongzhixitong/6.png" />
+					<img class="shrink-0 image_3 pos_5" src="./images/qichekongzhixitong/sududanwei.png" />
+					<div class="flex-col items-center section_2 space-y-18 pos_6">
+						<img class="image_4" src="./images/qichekongzhixitong/GEAR.png" />
+						<img class="image_5" src="./images/qichekongzhixitong/N.png" />
+					</div>
+					<img class="shrink-0 image_7 pos_8" src="./images/qichekongzhixitong/64du.png" />
+					<img class="shrink-0 image_6 pos_7" src="./images/qichekongzhixitong/wenduji.png" />
+					<img class="shrink-0 image_18 pos_31" src="./images/qichekongzhixitong/tingche.png" />
+					<img class="shrink-0 image_17 pos_30" src="./images/qichekongzhixitong/T.png" />
+					<img class="shrink-0 image_19 pos_32" src="./images/qichekongzhixitong/yuanguangdeng.png" />
+					<img class="shrink-0 image_24 pos_42" src="./images/qichekongzhixitong/aq.png" />
+					<img class="shrink-0 image_25 pos_44" src="./images/qichekongzhixitong/fadongji.png" />
+					<img class="shrink-0 image_18 pos_43" src="./images/qichekongzhixitong/absdeng.png" />
+					<div class="shrink-0 section pos"></div>
+					<div>
+						<span class="wd">14°</span>
+						<img class="wf" src="./images/zhanghu/wifi.png" />
+						<img class="ly" src="./images/zhanghu/lanya.png" />
+						<img class="tq" src="./images/zhanghu/tianqi.png" />
+						<span class="sj" id="time">12:00</span>
+						<span class="rq" id="time">2023.2.22</span>
+						<span class="xq" id="time">周三</span>
+					</div>
+				</div>
+			</div>
+			<div id="zuo2" class="transition" data-to="page-3" data-transition="horizontal-easing"></div>
+			<div id="you2" class="transition" data-to="page-1" data-transition="horizontal-easing-reverse"></div>
+			<div id="shang1" class="transition" data-to="page-6" data-transition="vertical-easing-reverse"></div>
+			<div id="shang2" class="transition" data-to="page-7" data-transition="vertical-easing-reverse"></div>
+		</div>
+		<!-- 汽车控制系统end -->
+
+		<!-- 倒车begin -->
+		<div id="page-3" class="page">			
+			<div class="dc">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<div class="flex-row justify-between items-center section_5 pos_9">
+						<div class="flex-row">
+							<img class="image_8" src="./images/daoche/yuyin.png" />
+							<div class="flex-row group_2 space-x-263">
+								<img class="image_9 image_12" src="./images/zhanghu/kongtiao.png" />
+								<img class="image_9 image_10" src="./images/zhanghu/zuoyi.png" />
+							</div>
+						</div>
+						<img class="image_11" src="./images/zhanghu/zhuye.png" />
+					</div>
+					<img class="image_7 pos_8" src="./images/zhanghu/fengshan.png" />
+					<img class="image_4 pos_4" src="./images/daoche/daochefuzhu.png" />
+					<img class="image_6 pos_7" src="./images/daoche/chehoushijiao.png" />
+					<img class="image_5 pos_5" src="./images/daoche/fushi.png" />
+					<div class="flex-row justify-end items-center section_2 space-x-18-reverse pos_2">
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="image_2" src="./images/daoche/tianqi.png" />
+						</div>
+						<div class="flex-col justify-start"><span class="text_2">14°</span></div>
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="image_2" src="./images/daoche/lanya.png" />
+						</div>
+						<div class="flex-col justify-start items-center image-wrapper">
+							<img class="image_3" src="./images/daoche/wifi.png" />
+						</div>
+					</div>
+					<div class="flex-row section space-x-30 pos">
+						<span class="self-center text" id="time">12:00</span>
+						<div class="flex-row items-baseline self-start group space-x-30">
+							<span class="font_1" id="time">2023.2.22</span>
+							<span class="font_1" id="time">周三</span>
+						</div>
+					</div>
+					<div class="section_3 pos_3"></div>
+					<div class="section_4 pos_6"></div>
+				</div>
+			</div>
+			<!-- 倒车end -->
+			<div id="huiqu" class="transition" data-to="page-1" data-transition="horizontal-fade"></div>
+			<div id="you3" class="transition" data-to="page-2" data-transition="horizontal-easing-reverse"></div>
+			<div id="shang1" class="transition" data-to="page-8" data-transition="vertical-easing-reverse"></div>
+			<div id="shang2" class="transition" data-to="page-9" data-transition="vertical-easing-reverse"></div>
+		</div>
+	    <!-- 倒车end -->
+
+		<!-- 导航begin -->
+		<div id="page-0" class="page">
+			<!-- 导航begin -->
+			<div class="dh">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<!-- 状态栏begin -->
+					<div>
+						<span class="wd">14°</span>
+						<img class="wf" src="./images/status bar/wifi.png" />
+						<img class="ly" src="./images/status bar/蓝牙.png" />
+						<img class="tq" src="./images/status bar/天气.png" />
+						<span class="sj" id="time">12:00</span>
+						<span class="rq" id="time">2023.2.22</span>
+						<span class="xq" id="time">周三</span>
+					</div>
+					<!-- 状态栏end -->
+
+					<div class="flex-col justify-start items-start group pos_2">
+						<div class="flex-col justify-start items-end relative section">
+							<div class="section_2"></div>
+							<div class="flex-row group_2 pos_3">
+								<!-- 警告 -->
+								<div class="flex-col justify-start items-center image-wrapper pos_17">
+									<img class="image_3" src="images\daohang\警告.png" />
+								</div>
+								<!-- 油箱 -->
+								<div class="flex-col justify-start items-end section_5 pos_16"><span
+										class="font_2 text_1">足</span></div>
+								<div class="flex-col items-start space-y-4 pos_9">
+									<img class="image_9" src="images\daohang\加油箱.png" />
+									<span class="font_2 text_9">充</span>
+								</div>
+								<!-- 路径及箭头 -->
+								<div class="flex-col justify-start items-center group_3 pos_4">
+									<img class="image_2" src="images\daohang\路径.png" />
+									<img class="image_8 pos_10" src="images\daohang\箭头.png" />
+								</div>
+								<!-- 简易导航指示 -->
+								<div class="flex-col justify-start items-center section_3 pos_15">
+									<div class="flex-col items-center group_4">
+										<span class="font_1 text">重庆市·巴南区</span>
+										<span class="font_1 text_2">800m</span>
+										<span class="text_3">前方路段直行</span>
+									</div>
+									<div class="flex-row pos_5">
+										<img class="image_4" src="images\daohang\左直线.png" />
+										<img class="self-start image_6" src="images\daohang\大箭头.png" />
+										<img class="image_5" src="images\daohang\右直线.png" />
+									</div>
+								</div>
+								<span class="text_4 pos_11">当前行驶速度：110km/h</span>
+								<div class="flex-col section_4 space-y-16 pos_7">
+									<img class="self-center image_7" src="images\daohang\加号.png" />
+									<div class="divider"></div>
+									<img class="self-center image_7" src="images\daohang\减号.png" />
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- 导航指示下框 -->
+					<div class="flex-row justify-between items-center section_6 pos_14">
+						<img class="image_10" src="images\control center\16778991003041869296.png" />
+						<div class="flex-row space-x-50">
+							<div class="flex-row items-center shrink-0">
+								<span class="font_3">19.7公里</span>
+								<span class="font_3 text_5">51分钟到达</span>
+								<img class="shrink-0 image_12" src="images\daohang\红绿灯.png" />
+								<span class="font_3">22</span>
+							</div>
+							<span class="self-start text_6">12：55到达</span>
+						</div>
+						<img class="image_11" src="images\control center\首页.png" />
+					</div>
+				</div>
+			</div>
+			<!-- 导航end -->
+			<div id="zuo3" class="transition" data-to="page-1" data-transition="horizontal-easing"></div>
+			<div id="shang1" class="transition" data-to="page-10" data-transition="vertical-easing-reverse"></div>
+			<div id="shang2" class="transition" data-to="page-11" data-transition="vertical-easing-reverse"></div>
+			<div id="yingydk" class="transition" data-to="page-1" data-transition="horizontal-fade-reverse"></div>
+		</div>
+		<!-- 导航end -->
+
+		<!-- 控制中心打开begin -->
+		<div id="page-4" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<!-- 跳转到1页：主页 -->
+			<div id="xia" class="transition" data-to="page-1" data-transition="vertical-easing"></div>
+			<!-- 跳转到13页：账户 -->
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 控制中心打开end -->
+
+		<!-- 状态栏打开begin -->
+		<div id="page-5" class="page">
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text" id="time">12:00</span>
+								<span class="font_2 text_3" id="time">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			<!-- 上拉回到主页 -->
+			<div id="xia" class="transition" data-to="page-1" data-transition="vertical-easing"></div>
+		</div>
+		<!-- 状态栏打开end -->
+
+		<!-- 控制控制中心打开begin -->
+		<div id="page-6" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<div id="xia" class="transition" data-to="page-2" data-transition="vertical-easing"></div>
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 控制控制中心打开end -->
+
+		<!-- 状态栏打开end -->
+		<div id="page-7" class="page">
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text"id="time">12:00</span>
+								<span class="font_2 text_3"id="time">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			<!-- 上拉回到主页 -->
+			<div id="xia" class="transition" data-to="page-2" data-transition="vertical-easing"></div>
+		</div>
+		<!-- 状态栏打开end -->
+
+		<!-- 控制中心打开begin -->
+		<div id="page-8" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<div id="xia" class="transition" data-to="page-3" data-transition="vertical-easing"></div>
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 控制中心打开end -->
+		<div id="page-9" class="page">
+			
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text"id="time">12:00</span>
+								<span class="font_2 text_3"id="time">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			
+			<div id="xia" class="transition" data-to="page-3" data-transition="vertical-easing"></div>
+		</div>
+		<!-- 状态栏打开end -->
+
+		<!-- 控制中心打开begin -->
+		<div id="page-10" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<div id="xia" class="transition" data-to="page-0" data-transition="vertical-easing"></div>
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 控制中心打开end -->
+
+		<!-- 状态栏打开begin -->
+		<div id="page-11" class="page">
+			<!-- 状态栏打开begin -->
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text"id="time">12:00</span>
+								<span class="font_2 text_3"id="time">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			<!-- 状态栏打开end -->
+			<div id="xia" class="transition" data-to="page-0" data-transition="vertical-easing"></div>
+		</div>
+		<!-- 状态栏打开end -->
+
+		<!-- 应用软件打开界面begin -->
+		<div id="page-12" class="page">
+			<!-- 应用软件打开界面begin -->
+			<div class="yydk">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<!-- 应用软件打开界面begin -->
+					<div class="flex-col justify-start items-start section_3 pos_10">
+						<img class="shrink-0 image_4" src="images\music\109951168159576909.jpg" />
+						<img class="shrink-0 image_12 pos_18" src="images\music\爱心.png" />
+						<img class="shrink-0 image_12 pos_19" src="images\music\下载.png" />
+						<img class="shrink-0 image_13 pos_20" src="images\music\_唱歌.png" />
+						<img class="shrink-0 image_12 pos_21" src="images\music\评论.png" />
+						<img class="shrink-0 image_12 pos_22" src="images\music\216更多-竖向.png" />
+						<div class="shrink-0 section_6 pos_27"></div>
+						<div class="shrink-0 section_4 pos_24"></div>
+						<div class="shrink-0 section_5 pos_26"></div>
+						<span class="font_3 pos_23">01:22</span>
+						<span class="font_3 text_8 pos_25">4:17</span>
+						<img class="shrink-0 image_7 pos_12" src="images\music\109951168159576909.jpg" />
+						<img class="shrink-0 image_5 pos_11" src="images\music\16779081679983496320.png" />
+						<img class="shrink-0 image_15 pos_29" src="images\music\播放.png" />
+						<img class="shrink-0 image_16 pos_32" src="images\music\下一个 下一首.png" />
+						<img class="shrink-0 image_16 pos_31" src="images\music\16779081677087085417.png" />
+						<img class="shrink-0 image_16 pos_30" src="images\music\循环.png" />
+						<img class="shrink-0 image_17 pos_33" src="images\music\列表.png" />
+						<span class="text_6 pos_16">乌梅子酱</span>
+						<span class="text_7 pos_17">李荣浩</span>
+					</div>
+					<!-- 音乐软件打开界面end -->
+					<!-- 应用图标begin -->
+					<div class="flex-col items-center section space-y-38 pos_8">
+						<img class="image_6" src="images\app\网易云音乐.png" />
+						<img class="image_10" src="images\app\抖音.png" />
+						<img class="image_6" src="images\app\微信.png" />
+						<img class="image_14" src="images\app\Chrome.png" />
+						<img class="image_10" src="images\app\地图.png" />
+					</div>
+					<!-- 应用图标end -->
+					<!-- 简易导航begin -->
+					<div class="flex-row section_2 pos_9">
+						<img class="shrink-0 image_8" src="images\daohang\左直线.png" />
+						<img class="shrink-0 self-start image_11" src="images\daohang\大箭头.png" />
+						<img class="shrink-0 image_9" src="images\daohang\右直线.png" />
+						<span class="text_9 pos_28">当前行驶速度：110km/h</span>
+						<span class="font_2 text_3 pos_13">重庆市·巴南区</span>
+						<span class="font_2 text_4 pos_14">800m</span>
+						<span class="text_5 pos_15">前方路段直行</span>
+					</div>
+					<!-- 简易导航end -->
+					<!-- 状态栏begin -->
+					<div class="flex-row justify-between items-center pos">
+						<div class="flex-row items-baseline space-x-30">
+							<span class="text"id="time">12:00</span>
+							<span class="font_1"id="time">2023.2.22</span>
+							<span class="font_1"id="time">周三</span>
+						</div>
+						<div class="flex-row items-center space-x-23">
+							<img class="shrink-0 image_2" src="images\status bar\天气.png" />
+							<span class="text_2">14°</span>
+							<img class="shrink-0 image_2" src="images\status bar\蓝牙.png" />
+							<img class="shrink-0 image_3" src="images\status bar\wifi.png" />
+						</div>
+					</div>
+					<!-- 状态栏end -->
+					<!-- 控制中心begin -->
+					<div class="flex-row justify-between section_7 pos_35">
+						<img class="self-center image_19" src="images\control center\16778991003041869296.png" />
+						<div class="flex-row items-center relative group">
+							<img class="image_18" src="images\control center\风扇.png" />
+							<img class="image_20 image_23" src="images\control center\空调.png" />
+							<img class="image_20 image_21" src="images\control center\车巴巴-座椅配置.png" />
+						</div>
+						<img class="self-center image_22" src="images\control center\首页.png" />
+						<!-- 控制中心end -->
+					</div>
+				</div>
+			</div>
+			<!-- 应用软件打开界面end -->
+			<!-- 点击切换设置begin -->
+			<div id="yingydk" class="transition" data-to="page-1" data-transition="vertical-fade-reverse"></div>
+			<div id="you1" class="transition" data-to="page-0" data-transition="horizontal-easing-reverse"></div>
+			<div id="zuo1" class="transition" data-to="page-2" data-transition="horizontal-easing"></div>
+			<div id="shang1" class="transition" data-to="page-14" data-transition="vertical-easing-reverse"></div>
+			<div id="shang2" class="transition" data-to="page-15" data-transition="vertical-easing-reverse"></div>
+		</div>
+		<!-- 点击切换设置end -->
+		<!-- 应用软件打开界面end -->
+		<!-- 账户begin -->
+		<div id="page-13" class="page">
+			<!-- 账户begin -->
+			<div class="zh">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<div class="flex-row justify-between items-center section_2 pos_14">
+						<div class="flex-row">
+							<img class="image_7" src="./images/zhanghu/yuyin.png" />
+							<div class="flex-row group space-x-263">
+								<img class="image_8 image_11" src="./images/zhanghu/kongtiao.png" />
+								<img class="image_8 image_9" src="./images/zhanghu/zuoyi.png" />
+							</div>
+						</div>
+						<img class="image_10" src="./images/zhanghu/zhuye.png" />
+					</div>
+					<img class="image_6 pos_13" src="./images/zhanghu/fengshan.png" />
+					<div class="flex-col justify-start items-center image-wrapper pos_8">
+						<img class="image_4" src="./images/zhanghu/touxiang.png" />
+					</div>
+					<span class="font_1 pos_10">123456</span>
+					<span class="text_2 pos_11">手机号：1912344321</span>
+					<div class="grid pos_12">
+						<div class="flex-row justify-between items-center grid-item">
+							<span class="font_3">我的电子驾驶证</span>
+							<img class="image_5" src="./images/zhanghu/tiaozhuan.png" />
+						</div>
+						<div class="flex-row justify-between items-center grid-item">
+							<span class="font_3">登录与安全</span>
+							<img class="image_5" src="./images/zhanghu/tiaozhuan.png" />
+						</div>
+						<div class="flex-row justify-between items-center grid-item">
+							<span class="font_3">其他账号</span>
+							<img class="image_5" src="./images/zhanghu/tiaozhuan.png" />
+						</div>
+						<div class="flex-row justify-between items-center grid-item">
+							<span class="font_3">账号帮助中心</span>
+							<img class="image_5" src="./images/zhanghu/tiaozhuan.png" />
+						</div>
+					</div>
+					<div class="flex-row justify-between items-center section pos_9">
+						<span class="font_3">关于账号</span>
+						<img class="image_5" src="./images/zhanghu/tiaozhuan.png" />
+					</div>
+					<div>
+						<span class="text pos_5">14°</span>
+						<img class="image_3 pos_3" src="./images/zhanghu/wifi.png" />
+						<img class="image_2 pos_2" src="./images/zhanghu/lanya.png" />
+						<img class="image_2 pos" src="./images/zhanghu/tianqi.png" />
+						<span class="font_1 pos_4"id="time">12:00</span>
+						<span class="font_2 pos_6"id="time">2023.2.22</span>
+						<span class="font_2 pos_7"id="time">周三</span>
+					</div>
+				</div>
+			</div>
+			<!-- 账户end -->
+			<div id="yingydk" class="transition" data-to="page-1" data-transition="vertical-fade-reverse"></div>
+			<div id="shang1" class="transition" data-to="page-16" data-transition="vertical-easing-reverse"></div>
+			<div id="shang2" class="transition" data-to="page-17" data-transition="vertical-easing-reverse"></div>
+		</div>
+		<!-- 账户end -->
+		<!-- 控制中心打开begin -->
+		<div id="page-14" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<div id="xia" class="transition" data-to="page-12" data-transition="vertical-easing"></div>
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 状态栏打开end -->
+		<!-- 状态栏打开begin -->
+		<div id="page-15" class="page">
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text">12:00</span>
+								<span class="font_2 text_3">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			<div id="yingydk" class="transition" data-to="page-12" data-transition="vertical-reverse"></div>
+		</div>
+		<!-- 状态栏打开end -->	
+		<!-- 控制中心打开begin -->
+		<div id="page-16" class="page">
+			<div class="kzzx">
+				<div class="flex-col justify-start items-center relative page">
+					<img class="image" src="images\16779081649670308786.png" />
+					<span class="text_2 pos_5">14°</span>
+					<img class="image_3 pos_3" src="./images/kongzhizhongxin/wifi.png" />
+					<img class="image_2 pos_2" src="./images/kongzhizhongxin/lanya.png" />
+					<img class="image_2 pos" src="./images/kongzhizhongxin/tianqi.png" />
+					<div class="flex-row justify-end items-center section space-x-78-reverse pos_8">
+						<img class="image_5" src="./images/kongzhizhongxin/wf.png" />
+						<div class="flex-row items-center space-x-10">
+							<div class="section_2"></div>
+							<img class="image_6" src="./images/kongzhizhongxin/xq.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper pos_10">
+						<img class="image_5" src="./images/kongzhizhongxin/ts.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_3 pos_12">
+						<img class="image_4" src="./images/kongzhizhongxin/yh.png" />
+					</div>
+					<div class="flex-row equal-division space-x-70 pos_13">
+						<div class="flex-col justify-start items-center equal_division_item1">
+							<img class="image_7" src="./images/kongzhizhongxin/ly.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item2">
+							<img class="image_7" src="./images/kongzhizhongxin/kt.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item3">
+							<img class="image_7" src="./images/kongzhizhongxin/ps.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item4">
+							<img class="image_7" src="./images/kongzhizhongxin/yg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item5">
+							<img class="image_7" src="./images/kongzhizhongxin/hg.png" />
+						</div>
+						<div class="flex-col justify-start items-center equal_division_item6">
+							<img class="image_7" src="./images/kongzhizhongxin/fs.png" />
+						</div>
+					</div>
+					<img class="image_8 pos_17" src="./images/kongzhizhongxin/wenduxianshi.png" />
+					<div class="flex-col justify-start section_3 pos_14">
+						<div class="flex-col justify-start items-center image-wrapper_5">
+							<img class="image_9" src="./images/kongzhizhongxin/yinliang.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start section_4 pos_15">
+						<div class="flex-col justify-start items-center image-wrapper_6">
+							<img class="image_9" src="./images/kongzhizhongxin/liangdu.png" />
+						</div>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_1 pos_9">
+						<img class="image_5" src="./images/kongzhizhongxin/gps.png" />
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_2 pos_11">
+						<img class="image_5" src="./images/kongzhizhongxin/jingyin.png" />
+					</div>
+					<div class="flex-col items-start button pos_23">
+						<span class="font_2">当前已经</span>
+						<span class="font_2 text_3">连接到</span>
+					</div>
+					<div class="flex-col justify-start items-center image-wrapper_4 pos_18">
+						<img class="image_9" src="./images/kongzhizhongxin/cheneidengguang.png" />
+					</div>
+					<div class="section_6 pos_19"></div>
+					<div class="section_6 pos_20"></div>
+					<div class="section_6 pos_21"></div>
+					<div class="section_6 pos_22"></div>
+					<div class="flex-col section_5 space-y-50 pos_16">
+						<div class="flex-row justify-between group">
+							<img class="image_9" src="./images/kongzhizhongxin/zhileng.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/nuanqi.png" />
+							<img class="image_9" src="./images/kongzhizhongxin/ruofeng.png" />
+							<img class="image_9 image_10" src="./images/kongzhizhongxin/qiangfeng.png" />
+						</div>
+						<div class="flex-row items-center space-x-28">
+							<div class="flex-row shrink-0 space-x-23">
+								<img class="image_9" src="./images/kongzhizhongxin/fj.png" />
+								<img class="image_9" src="./images/kongzhizhongxin/jw.png" />
+							</div>
+							<div class="flex-row items-center flex-auto group_2 space-x-25">
+								<div class="flex-auto section_7"></div>
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/sw.png" />
+								<img class="shrink-0 image_9" src="./images/kongzhizhongxin/fz.png" />
+							</div>
+						</div>
+					</div>
+					<img class="image_11 pos_24" src="./images/daoche/back.png" />
+					<div class="section_8 pos_25"></div>
+					<span class="text pos_4" id="time">12:00</span>
+					<span class="font_1 pos_6" id="time">2023.2.22</span>
+					<span class="font_1 pos_7" id="time">周三</span>
+				</div>
+			</div>
+			<div id="xia" class="transition" data-to="page-13" data-transition="vertical-easing"></div>
+			<div id="tozh" class="transition" data-to="page-13" data-transition="vertical-fade"></div>
+		</div>
+		<!-- 控制中心打开end -->
+
+		<!-- 状态栏打开begin -->
+		<div id="page-17" class="page">
+			<div class="ztldk">
+				<div class="flex-col justify-start items-center relative page">
+					<img src="images\16779081649670308786.png" />
+					<div class="section pos">
+						<img class="image_7 pos_12" src="images\zhuangtailan\3.1 下拉.png" />
+						<!-- 时间天气begin -->
+						<div class="flex-row justify-between items-center group_6 pos_2">
+							<!-- 时间begin -->
+							<div class="flex-col items-start space-y-20">
+								<span class="text">12:00</span>
+								<span class="font_2 text_3">2月22日周三·癸卯年二月初三</span>
+							</div>
+							<!-- 时间end -->
+							<!-- 天气信息begin -->
+							<!-- 天气图片信息begin -->
+							<div class="flex-col justify-start items-start relative group_1">
+								<img class="image_3" src="images\weather\16778991010520209185.png" />
+								<img class="image_2 pos_1" src="images\weather\16778991079741724721.png" />
+								<img class="image_4 pos_6" src="images\weather\16778991079726758497.png" />
+							</div>
+							<!-- 天气图片信息end -->
+							<!-- 天气文字信息begin -->
+							<div class="group pos_4">
+								<span class="text_2">14°</span>
+								<span class="font_1"><br /></span>
+								<span class="font_1">多云</span>
+							</div>
+							<!-- 天气文字信息end -->
+							<!-- 天气信息end -->
+						</div>
+						<!-- 时间天气end -->
+						<!-- 微信消息提示begin -->
+						<div class="flex-col list space-y-28 pos_11">
+							<!-- 微信消息1 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息2 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+							<!-- 微信消息3 -->
+							<div class="flex-row items-center section_2 space-x-22">
+								<img class="shrink-0 image_5" src="images\app\微信.png" />
+								<div class="group_3 view">
+									<span class="font_3">微信</span>
+									<span class="font_2"><br /></span>
+									<span class="font_2">你收到了一条微信消息</span>
+								</div>
+							</div>
+						</div>
+						<!-- 微信消息end -->
+					</div>
+				</div>
+			</div>
+			<div id="yingydk" class="transition" data-to="page-13" data-transition="vertical-reverse"></div>
+		</div>
+		<!-- 状态栏打开end -->
+	</div>
+
+
+	<script src="js/jquery.js"></script>
+	<script src="js/page-transitions.js"></script>
+	<!-- <script src="js/时间.js"></script> -->
+
+</body>
+
+</html>
