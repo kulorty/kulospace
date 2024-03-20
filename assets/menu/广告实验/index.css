@@ -1,0 +1,107 @@
+/* 绘制主体 */
+.main {
+    margin: 0 auto;
+    width: 1000px;
+    height: 5000px;
+    position: relative;
+}
+
+/* 内容样式包括颜色 */
+.content {
+    margin: 0 auto;
+    width: 800px;
+    height: 5000px;
+    background: gray;
+}
+
+/* 左侧广告 */
+#tie1 {
+    position: absolute;
+    left: -195px;
+    top: 80px;
+    width: 205px;
+    height: 310px;
+    transition: left 1.5s ease-in-out;
+}
+
+#t1 {
+    width: 205px;
+    height: 310px;
+}
+
+.T1 {
+    position: relative;
+    width: 205px;
+    height: 310px;
+}
+
+/* 右侧广告 */
+#tie2 {
+    position: absolute;
+    right: -195px;
+    top: 80px;
+    width: 205px;
+    height: 310px;
+    transition: right 1.5s ease-in-out;
+}
+
+#t2 {
+    width: 205px;
+    height: 310px;
+}
+
+.T2 {
+    width: 205px;
+    height: 310px;
+}
+
+/* 弹窗广告 */
+#tanchu {
+    width: 320px;
+    height: 180px;
+    position: fixed;
+    right: 0;
+    bottom: -300px;
+    transition: bottom 1s ease-in-out;
+}
+
+#tanchu.move {
+    transition: bottom 2s ease-in-out;
+}
+
+#tanchu.show {
+    bottom: 0;
+}
+
+#tc {
+    width: 320px;
+    height: 180px;
+}
+
+.T3 {
+    width: 205px;
+    height: 310px;
+}
+
+/* 广告关闭按钮 */
+.guant1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border: 1px solid black;
+    padding: 1px 4px;
+    font-size: 4px;
+    cursor: pointer;
+}
+
+.guant2 {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    background: #fff;
+    border: 1px solid black;
+    padding: 1px 2px;
+    font-size: 4px;
+    cursor: pointer;
+}
