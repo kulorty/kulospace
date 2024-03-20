@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>DOM操作-练习</title>
+	<style type="text/css">
+		body {
+			font-size: 13px;
+			line-height: 25px;
+		}
+
+		table {
+			border-top: 1px solid #333;
+			border-left: 1px solid #333;
+			width: 300px;
+		}
+
+		td {
+			border-right: 1px solid #333;
+			border-bottom: 1px solid #333;
+		}
+
+		.center {
+			text-align: center;
+		}
+	</style>
+
+</head>
+
+<body>
+	<table border="0" cellspacing="0" cellpadding="0" id="myTable">
+		<tr id="row1">
+			<td>书名</td>
+			<td>价格</td>
+		</tr>
+		<tr id="row2">
+			<td>看得见风景的房间</td>
+			<td class="center">&yen;30.00</td>
+		</tr>
+		<tr id="row3">
+			<td>60个瞬间</td>
+			<td class="center">&yen;32.00</td>
+		</tr>
+	</table>
+	<input name="b1" type="button" value="增加一行" onclick="addRow()" />
+	<input name="b2" type="button" value="删除第2行" onclick="delRow()" />
+	<input name="b3" type="button" value="修改标题样式" onclick="updateRow()" />
+	<input name="b4" type="button" value="复制最后一行" onclick="copyRow()" />
+	<script src="js/jquery-3.6.4.min.js"></script>
+	<script>
+		//原生js方式
+		// function addRow() {
+		// 	var fRow = document.getElementById("row3");
+		// 	var newRow = document.createElement("tr"); //创建行节点
+		// 	var col1 = document.createElement("td"); //创建单元格节点
+		// 	col1.innerHTML = "幸福从天而降"; //为单元格添加文本
+		// 	var col2 = document.createElement("td");
+		// 	col2.innerHTML = "&yen;18.50";
+		// 	col2.setAttribute("align", "center");
+		// 	newRow.appendChild(col1); //把单元格添加到行节点中
+		// 	newRow.appendChild(col2);
+		// 	document.getElementById("row1").parentNode.insertBefore(newRow, fRow); //把行节点添加到表格末尾			
+		// }
+
+		// function updateRow() {
+		// 	var uRow = document.getElementById("row1");
+		// 	//标题行设置为字体加粗、文本居中显示，背景颜色为灰色
+		// 	uRow.setAttribute("style", "font-weight:bold;text-align:center;background-color: #cccccc;");
+		// }
+
+		// function delRow() {
+		// 	var dRow = document.getElementsByTagName("tr"); //访问被删除的行
+		// 	if(dRow[2]!=null){
+		// 		dRow[2].parentNode.removeChild(dRow[2]); //删除行
+		// 	}
+		// }
+
+		// function copyRow() {
+		// 	var oldRow = document.getElementById("row3"); //访问复制的行
+		// 	var newRow = oldRow.cloneNode(true); //复制指定的行及子节点
+		// 	document.getElementById("myTable").appendChild(newRow); //在指定节点的末尾添加行
+		// }			
+
+		//使用jQuery方式
+		//添加一行
+		function addRow() {
+			var fRow = $("#row3");
+			var newRow = $("<tr></tr>"); //创建行节点
+			var col1 = $("<td></td>").html("幸福从天而降"); //创建单元格节点并为其添加文本
+			var col2 = $("<td></td>").html("&yen;18.50").attr("align", "center");
+			newRow.append(col1).append(col2);
+			$("#row2").after(newRow); //把行节点添加到指定行的下面
+		}
+
+		//删除第二行
+		function updateRow() {
+			var uRow = $("#row1");
+			//标题行设置为字体加粗、文本居中显示，背景颜色为灰色
+			uRow.css({ "font-weight": "bold", "text-align": "center", "background-color": "#cccccc" });
+		}
+		//修改标题样式
+		function delRow() {
+			var dRow = $("tr"); //访问被删除的行
+			if (dRow[2] != null) {
+				$(dRow[2]).remove(); //删除行
+			}
+		}
+		//复制最后一行
+		function copyRow() {
+			var oldRow = $("#row3"); //访问复制的行
+			var newRow = oldRow.clone(); //复制指定的行及子节点
+			$("#myTable").append(newRow); //在指定节点的末尾添加行
+		}
+
+
+
+	</script>
+
+</body>
+
+</html>
