@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<!-- 219971320刘桂宏 -->
+<head>
+	<meta charset="utf-8" />
+	<title>让坦克开起来</title>
+	<style type="text/css">
+		input {
+			font-size: 26px;
+			margin-top: 20px;
+		}
+
+		body {
+			background-image: url(images/grassland.png);
+		}
+
+		#mytank {
+			position: absolute;
+			left: 10px;
+			top: 100px
+		}
+
+		#mytank {
+			position: absolute;
+			left: 10px;
+			top: 100px;
+
+		}
+	</style>
+</head>
+
+<body>
+	<img id="mytank" src="images/right.png" />
+	<script>
+		// 编写代码，让坦克能上下左右移动
+		let tank = document.getElementById("mytank");//获取坦克
+		let map=document.querySelector("html");//获取地图
+		//设置坦克的初始位置
+		let tankX = 10;
+		let tankY = 100;
+		let tankdirection = "right";//坦克的初始方向
+		//定义地图的长宽
+		let mapWidth=document.documentElement.clientWidth;
+		let mapHeight=document.documentElement.clientHeight;
+		//实时获取地图大小
+		window.addEventListener('resize', () => {
+			mapWidth=document.documentElement.clientWidth;
+			mapHeight=document.documentElement.clientHeight;
+			//固定坦克的移动范围，无论窗口如何缩放，坦克都不会超出地图边界
+			let h = mapHeight - 80;
+			let w = mapWidth - 90;
+			if (tankY > h){
+				tankY = h;
+				tank.style.top = tankY + "px";
+			}
+			if (tankX > w){
+				tankX = w;
+				tank.style.left = tankX + "px";
+			}
+		});
+		//禁用鼠标右键
+		document.oncontextmenu = function () {
+			return false;
+		}
+		//wasd控制坦克移动
+		document.addEventListener("keydown", function (event) {
+			tank.style.transition = "transform 0.2s ease-out";//设置坦克转向的过渡时间
+			//坦克转向均以初始化的向右为基准，在此基础上进行旋转
+			//判断按下的键
+			switch (event.key) {
+				//向上移动
+				case "w":
+				//判断坦克的方向，如果不是向上，则转向
+					if (tankdirection == "left") {
+						//转向过程中的特殊情况，动画角度过大，进行特殊处理使得动画更加自然
+						tank.style.transform = "rotate(270deg)";
+						setTimeout(function () {
+							tank.style.transition = "transform 0s";
+							tank.style.transform = "rotate(-90deg)";
+						}, 200);
+					}
+					if (tankdirection == "right") {
+						tank.style.transform = "rotate(-90deg)";
+					}
+					if (tankdirection == "down") {
+						tank.style.transform = "rotate(-90deg)";
+					}
+					tankdirection = "up"; //转向完成后，更新坦克的方向
+					//控制坦克的移动不超出地图边界
+					tankY -= 10; //向上移动距离
+					if(tankY >= 20 ){
+						//不超出则正常移动
+						tank.style.top = tankY + "px";
+					}else{
+						//超出则不移动
+						tankY = 20;
+					}
+					//tank.src = "images/up.png";
+					break;
+
+				//向下移动
+				case "s":
+					//判断坦克的方向，如果不是向下，则转向
+					if (tankdirection == "left") {
+						tank.style.transform = "rotate(90deg)";
+					}
+					if (tankdirection == "right") {
+						tank.style.transform = "rotate(90deg)";
+					}
+					if (tankdirection == "up") {
+						tank.style.transform = "rotate(90deg)";
+					}
+					tankdirection = "down"; //转向完成后，更新坦克的方向
+					tankY += 10; //向下移动距离
+					//控制坦克的移动不超出地图边界
+					if(tankY<mapHeight-80){
+						tank.style.top = tankY + "px";
+					}else{
+						//超出则不移动
+						tankY=mapHeight-80;
+					}
+					//tank.src = "images/down.png";
+					break;
+
+				//向左移动
+				case "a":
+					//判断坦克的方向，如果不是向左，则转向
+					if (tankdirection == "up") {
+						//转向过程中的特殊情况，动画角度过大，进行特殊处理使得动画更加自然
+						tank.style.transform = "rotate(-180deg)";
+						setTimeout(function () {
+							tank.style.transition = "transform 0s";
+							tank.style.transform = "rotate(180deg)";
+						}, 200);
+					}
+					if (tankdirection == "down") {
+						tank.style.transform = "rotate(180deg)";
+					}
+					if (tankdirection == "right") {
+						tank.style.transform = "rotate(180deg)";
+					}
+					tankdirection = "left"; //转向完成后，更新坦克的方向
+					tankX -= 20; //向左移动距离
+					//控制坦克的移动不超出地图边界
+					if(tankX >= 20){
+						//不超出则正常移动
+						tank.style.left = tankX + "px";
+					}else{
+						//超出则不移动
+						tankX = 20;
+					}
+					//tank.src = "images/left.png";
+					break;
+
+				//向右移动
+				case "d":
+					//判断坦克的方向，如果不是向右，则转向
+					if (tankdirection == "up") {
+						tank.style.transform = "rotate(0deg)";
+					}
+					if (tankdirection == "down") {
+						tank.style.transform = "rotate(0deg)";
+					}
+					if (tankdirection == "left") {
+						tank.style.transform = "rotate(0deg)";
+					}
+					tankdirection = "right"; //转向完成后，更新坦克的方向
+					tankX += 10; //向右移动距离
+					//控制坦克的移动不超出地图边界
+					if(tankX<mapWidth-90){
+						//不超出则正常移动
+						tank.style.left = tankX + "px";
+					}else{
+						//超出则不移动
+						tankX=mapWidth-90;
+					}
+					//tank.src = "images/right.png";
+					break;
+			}
+		});
+	</script>
+</body>
+
+</html>
