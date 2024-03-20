@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- 219971320刘桂宏 -->
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- 引入vue3 -->
+		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+		<style>
+			/* 全局样式 */
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				background: #f5f5f5;
+			}
+			#app {
+				padding: 20px 0;
+				width: 1226px;
+				height: 686px;
+				margin: 0 auto;
+			}
+			/* 标题 */
+			h2 {
+				font-size: 22px;
+				font-weight: lighter;
+				width: 100%;
+				display: flex;
+				line-height: 58px;
+				height: 58px;
+				justify-content: space-between;
+			}
+			h2 span {
+				display: flex;
+				align-items: center;
+				font-size: 16px;
+			}
+			h2 span:hover {
+				cursor: pointer;
+				color: #ff6700;
+			}
+			h2 img {
+				padding-top: 2px;
+				width: 20px;
+				height: 20px;
+			}
+
+			/* 具体内容 */
+			.content {
+				width: 1226px;
+				height: 628px;
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+			}
+			/* 左侧推荐 */
+			.content .recommendation img {
+				width: 234px;
+				height: 614px;
+				transition: all 0.3s ease-in-out;
+			}
+			.content .recommendation img:hover {
+				transform: translate(0, -2px);
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+			}
+			/* 右侧列表 */
+			.content .detial ul {
+				width: 992px;
+				display: flex;
+				/* justify-content: space-between; */
+				flex-wrap: wrap;
+			}
+			.content .detial ul li {
+				width: 234px;
+				background: #fff;
+				height: 300px;
+				display: flex;
+				flex-direction: column;
+				list-style: none;
+				margin: 0 0 14px 14px;
+				align-items: center;
+				font-size: 14px;
+				justify-content: center;
+				transition: all 0.3s;
+			}
+			.content .detial ul li:hover {
+				transform: translate(0, -2px);
+				box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+			}
+			.img img {
+				width: 160px;
+				height: 160px;
+			}
+			.content .detial ul li .info {
+				font-size: 12px;
+				color: #b0b0b0;
+				margin: 2px 0 10px 0;
+				max-width: 214px;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+			}
+			.content .detial ul li .price {
+				color: #ff6700;
+				margin-bottom: 14px;
+			}
+			.content .detial ul li .price del {
+				color: #b0b0b0;
+				margin-left: 7px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="app">
+			<!-- 标题 start -->
+			<h2>
+				{{ plateName }}
+				<span @mouseenter="showMore" @mouseleave="hideMore">{{more}}<img :src="moreImg" alt="" /></span>
+			</h2>
+			<!-- 标题 end -->
+
+			<!-- 具体内容 start -->
+			<div class="content">
+				<!-- 左侧推荐 start -->
+				<div class="recommendation"><img :src="recommendation" alt="" /></div>
+				<!-- 左侧推荐 end -->
+
+				<!-- 右侧列表 start -->
+				<div class="detial">
+					<ul>
+						<li v-for="item in goods">
+							<!-- 手机缩略图  -->
+							<div class="img"><img :src="item.img" alt="" /></div>
+							<!-- 手机名称 -->
+							<p class="name">{{item.name}}</p>
+							<!-- 手机简介 -->
+							<span class="info">{{item.info}}</span>
+							<!-- 手机价格 -->
+							<p class="price">{{item.price}}<del v-if="item.originalPrice">{{item.originalPrice}}</del></p>
+						</li>
+					</ul>
+				</div>
+				<!-- 右侧列表 end -->
+			</div>
+			<!-- 具体内容 end -->
+		</div>
+	</body>
+	<script>
+		// 创建vue实例
+		var app = Vue.createApp({
+			data() {
+				return {
+					plateName: "手机",
+					more: "查看更多",
+					moreImg: "./images/more.png",
+					recommendation: "./images/recommendation.png",
+					// 商品信息
+					goods: [
+						{
+							img: "./images/1.png",
+							name: "Xiaomi 14 Ultra",
+							info: "徕卡全明星四摄 | 双向卫星通信  | 小米澎湃OS",
+							price: "6499元起",
+							originalPrice: "",
+						},
+						{
+							img: "./images/2.png",
+							name: "Redmi K70 Pro",
+							info: "第三代骁龙8 年度旗舰平台",
+							price: "3299元起",
+							originalPrice: "",
+						},
+						{
+							img: "./images/3.png",
+							name: "Redmi K70",
+							info: "第二代骁龙8 旗舰芯",
+							price: "2399元起",
+							originalPrice: "2499元",
+						},
+						{
+							img: "./images/4.png",
+							name: "Redmi K70E",
+							info: "新一代旗舰焊门员",
+							price: "1899元起",
+							originalPrice: "1999元",
+						},
+						{
+							img: "./images/5.png",
+							name: "Xiaomi 14 Pro",
+							info: "徕卡Summilux可变光圈镜头｜小米澎湃OS",
+							price: "4999元起",
+							originalPrice: "",
+						},
+						{
+							img: "./images/6.png",
+							name: "Xiaomi 14",
+							info: "徕卡光学Summilux镜头｜小米澎湃OS｜第三代骁龙®8移动平台",
+							price: "3999元起",
+							originalPrice: "",
+						},
+						{
+							img: "./images/7.png",
+							name: "Redmi Note 13 Pro",
+							info: "小金刚品质",
+							price: "1399元起",
+							originalPrice: "1499元",
+						},
+						{
+							img: "./images/8.png",
+							name: "Redmi Note 13 Pro+",
+							info: " 天玑 7200-Ultra 处理器",
+							price: "1899元起",
+							originalPrice: "1999元",
+						},
+					],
+				};
+			},
+			methods: {
+				//图片更改
+				showMore() {
+					this.moreImg = "./images/more_hover.png";
+				},
+				hideMore() {
+					this.moreImg = "./images/more.png";
+				},
+			},
+		}).mount("#app");
+	</script>
+</html>
