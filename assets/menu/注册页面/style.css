@@ -1,0 +1,185 @@
+html {
+    height: 100%;
+    background: url(./images/gs.png);
+}
+
+body {
+    font-family: "Microsoft YaHei", montserrat, arial, verdana;
+}
+
+#myform {
+    width: 400px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
+
+#myform fieldset {
+    background: #fff;
+    border-radius: 3px;
+    border: 0px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: absolute;
+}
+
+#myform fieldset:not(:first-of-type) {
+    display: none;
+}
+
+#myform input,
+#myform textarea {
+    padding: 15px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: "Microsoft YaHei", montserrat, arial, verdana;
+    color: #2c3e50;
+    font-size: 13px;
+}
+
+#myform .next,
+#myform .next:hover {
+    width: 100%;
+    background: #1bb7eb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+#myform .previous,
+#myform .previous:hover {
+    width: 100%;
+    background: #1bb7eb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+#myform .submit,
+#myform .submit:hover {
+    width: 100%;
+    background: #1bb7eb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+#myform .confirm,
+#myform .confirm:hover {
+    width: 100%;
+    background: #1bb7eb;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 10px 5px;
+}
+
+#myform .comfirm:hover,
+#myform .comfirm:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1bb7eb;
+}
+
+#myform .submit:focus,
+#myform .submit:hover {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1bb7eb;
+}
+
+#myform .next:hover,
+#myform .next:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1bb7eb;
+}
+
+#myform .previous:hover,
+#myform .previous:focus {
+    box-shadow: 0 0 0 2px white, 0 0 0 3px #1bb7eb;
+}
+
+.tishi1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.tishi2 {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#jindutiao {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+    padding: 0;
+}
+
+#jindutiao li {
+    list-style-type: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+}
+
+#jindutiao li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #333;
+    background: white;
+    border-radius: 15px;
+    margin: 0 auto 5px auto;
+    transition: all 0.8s ease-in-out;
+}
+
+#jindutiao li:after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: white;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+    transition: all 0.8s ease-in-out;
+}
+
+#jindutiao li:first-child:after {
+    content: none;
+}
+
+#jindutiao li.active:before,
+#jindutiao li.active:after {
+    background: #1bb7eb;
+    color: white;
+    transition: all 0.8s ease-in-out;
+}
+
+.error-message {
+    top: -45px;
+    color: red;
+}
