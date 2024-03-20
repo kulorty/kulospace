@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 219971320刘桂宏 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+
+<body>
+    <div id="map">
+        <img src="./images/player_standr.gif" alt="" id="player1">
+    </div>
+    <script src="./jquery-3.7.0.min.js"></script>
+    <script>
+        $(function () {
+            let bian = false;
+            //移动人物
+            $('#map').click(function (e) {
+                //获得人物位置
+                let player_x = $('#player1').position().left
+                if (e.clientX - player_x - 100 < 0) {
+                    $('#player1').attr('src', './images/player_left.gif')
+                } else {
+                    $('#player1').attr('src', './images/player_right.gif')
+                }
+                //开始移动
+                $('#player1').stop().animate({
+                    left: e.clientX - 100,
+                    top: e.clientY - 80
+                }, 1500)
+            })
+            //变身
+            $('#map').dblclick(function () {
+                bian = !bian;
+                console.log(bian);
+                if (bian == true) {
+                    //获取图片朝向
+                    let quna = $('#player1').attr('src')
+                    if (quna == './images/player_left.gif') {
+                        $('#player1').attr('src', './images/playerbig_left.gif')
+                    } else {
+                        $('#player1').attr('src', './images/playerbig_right.gif')
+                    }
+                    $('#map').click(function (e) {
+                        //获得人物位置x
+                        let player_x = $('#player1').position().left
+                        if (e.clientX - player_x - 100 < 0) {
+                            $('#player1').attr('src', './images/playerbig_left.gif')
+                        } else {
+                            $('#player1').attr('src', './images/playerbig_right.gif')
+                        }
+                        //开始移动
+                        $('#player1').stop().animate({
+                            left: e.clientX - 100,
+                            top: e.clientY - 80
+                        }, 1500)
+                    })
+                }
+                else {
+                    //获取图片朝向
+                    let quna = $('#player1').attr('src')
+                    if (quna == './images/player_left.gif') {
+                        $('#player1').attr('src', './images/player_left.gif')
+                    } else {
+                        $('#player1').attr('src', './images/player_right.gif')
+                    }
+                    $('#map').click(function (e) {
+                        //获得人物位置x
+                        let player_x = $('#player1').position().left
+                        if (e.clientX - player_x - 100 < 0) {
+                            $('#player1').attr('src', './images/player_left.gif')
+                        } else {
+                            $('#player1').attr('src', './images/player_right.gif')
+                        }
+                        //开始移动
+                        $('#player1').stop().animate({
+                            left: e.clientX - 100,
+                            top: e.clientY - 80
+                        }, 1500)
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
