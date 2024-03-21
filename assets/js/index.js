@@ -1,5 +1,5 @@
 //页面加载完成后进行跳转
-$(document).ready(function () {
+window.onload=function () {
 	var enterMain = $("#enterMain");
 	var main = $(".main");
 	var loading = $(".loading");
@@ -25,7 +25,7 @@ $(document).ready(function () {
 			loaded.css("display", "none");
 		}, 500);
 	});
-});
+};
 
 //项目展示标题的选择切换
 var slide1 = $("#slide1");
