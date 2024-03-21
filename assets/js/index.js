@@ -133,7 +133,7 @@ function swWeb(data) {
 var prev = $(".prev");
 var next = $(".next");
 var nav = $("#nav");
-var step = 520; // 每次移动的步长
+var step = 525; // 每次移动的步长
 
 function nextPage() {
 	var currentPosition = parseInt(nav.css("top")) || 0;
