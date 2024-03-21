@@ -118,7 +118,7 @@ body {
 .main .content .navlist {
   margin: 14px 0;
   overflow-y: hidden;
-  height: 538px;
+  height: 520px;
   width: 280px;
   position: relative;
 }
@@ -241,4 +241,9 @@ body {
 .nav11 {
   left: -220px;
   transform: scale(0.7) !important;
+}
+
+.nav12 {
+  left: 0;
+  transform: scale(0.5) !important;
 }

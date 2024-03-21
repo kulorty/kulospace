@@ -1,5 +1,5 @@
 //页面加载完成后进行跳转
-window.onload=function () {
+window.onload = function () {
 	var enterMain = $("#enterMain");
 	var main = $(".main");
 	var loading = $(".loading");
@@ -127,13 +127,17 @@ function swWeb(data) {
 			showWeb.attr("src", "./assets/menu/小米商城手机板块/index.html");
 			showWeb.addClass("nav11");
 			break;
+		case "12":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/腾讯新闻/index.html");
+			showWeb.addClass("nav12");
 	}
 }
 
 var prev = $(".prev");
 var next = $(".next");
 var nav = $("#nav");
-var step = 520; // 每次移动的步长
+var step = 525; // 每次移动的步长
 
 function nextPage() {
 	var currentPosition = parseInt(nav.css("top")) || 0;
