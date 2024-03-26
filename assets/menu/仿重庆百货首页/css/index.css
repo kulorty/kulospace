@@ -1,0 +1,793 @@
+html {
+    margin: 0 auto;
+    background: #F8F8F8;
+    position: relative;
+}
+
+/* 顶部导航栏样式 开始 */
+.banner {
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+
+.banner>div {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+.logo {
+    height: 80px;
+    margin: 0 95px;
+}
+
+.daohang {
+    position: absolute;
+    top: 0;
+    right: 110px;
+    list-style: none;
+    margin: 0;
+}
+
+.daohang li {
+    display: inline-block;
+    width: 80px;
+    line-height: 38px;
+    padding: 21px 13px;
+    margin-left: -4.2px;
+    text-align: center;
+}
+
+.daohang a {
+    text-decoration: none;
+}
+
+.daohang li:hover {
+    color: white;
+    background: #0a3d8f;
+    transition: all 0.5s;
+}
+
+/* 顶部导航栏样式 结束 */
+/* 轮播图样式 开始 */
+.lunbo {
+    padding: 0;
+    height: 560px;
+    width: 100%;
+    margin-top: 80px;
+    overflow: hidden;
+    position: relative;
+    margin-left: -8px;
+}
+
+.lunbo>ol {
+    display: flex;
+    width: 300px;
+    /* height: 20px; */
+    position: absolute;
+    list-style: none;
+    right: -80px;
+    bottom: 30px;
+}
+
+.lunbo>ol li {
+    margin: 0 3px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.lunbo>ol li.active {
+    border-radius: 100px;
+    background: #fff;
+    width: 35px;
+    height: 8px;
+}
+
+#lb img {
+    width: 100%;
+}
+
+.imgBox {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    width: 500%;
+    height: 490px;
+    display: flex;
+}
+
+#lb {
+    width: 100%;
+    list-style: none;
+}
+
+.lunbor {
+    display: none;
+    position: absolute;
+    top: 32%;
+    right: 40px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+}
+
+.lunbor>img {
+    width: 50px;
+    height: 50px;
+}
+
+.lunbol {
+    display: none;
+    position: absolute;
+    top: 32%;
+    left: 40px;
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+}
+
+.lunbol>img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+/* 轮播图样式 结束 */
+/* 公司业态样式 开始 */
+.gsyt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    position: relative;
+    height: 500px;
+    top: 100px;
+    margin: 0 auto;
+}
+
+.gsyt>h2 {
+    width: 300px;
+    position: absolute;
+    left: 0;
+    font-size: 36px;
+    font-weight: 500;
+    top: -100px;
+    color: #0A3D8F;
+}
+
+.gsyt>h2>span {
+    color: rgba(36, 37, 38, 0.6);
+    font-size: 22px;
+    position: absolute;
+    width: 400px;
+    bottom: 5px;
+    left: 160px;
+}
+
+.gsyt_zonghe {
+    display: flex;
+    width: 1300vw;
+    max-width: 1300px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.item {
+    position: relative;
+    width: 230px;
+    margin: 10px;
+    cursor: pointer;
+    /* display: flex; */
+    background-size: cover;
+    background-position: center;
+    transition: flex .5s ease;
+    overflow: hidden;
+}
+
+.item .shadow {
+    width: 100%;
+    height: 60px;
+    background: rgb(9, 52, 122, .8);
+    position: absolute;
+    transition: all 0.8s ease;
+    bottom: 0;
+}
+
+.item .text {
+    position: absolute;
+    top: 418px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+    width: 170px;
+    height: 60px;
+    padding: 30px;
+    overflow: hidden;
+    transition: all .8s ease;
+}
+
+.ti {
+    position: absolute;
+    top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.tit {
+    transition-duration: .5s;
+    position: absolute;
+    top: 60px;
+    font-size: 14px;
+    padding-right: 30px;
+    overflow: hidden;
+}
+
+.item.active {
+    flex:  428px;
+}
+
+.item.active .shadow {
+    height: 120px;
+}
+
+.item.active .text {
+    transition-duration: .6s;
+    flex: 2 540px;
+    top: 360px;
+    padding-right: 20px;
+    width: 480px;
+}
+
+.item.active .tit {
+    height: 40px;
+}
+
+/* 公司业态样式 结束 */
+/* 公司介绍样式 开始 */
+.baihuojieshao {
+    left: 0;
+    top: 100px;
+    margin: 70px -8px;
+    display: block;
+    background: url("../images/jieshao_beijing.png");
+    background-size: 100%;
+    width: 100%;
+    height: 310px;
+    position: relative;
+}
+
+.baihuojieshao>img {
+    position: absolute;
+    height: 100px;
+    top: 40px;
+    left: 100px;
+}
+
+.baihuojieshao p {
+    position: absolute;
+    color: #fff;
+    top: 120px;
+    left: 100px;
+    right: 100px;
+    font-size: 14px;
+}
+
+.jieshao>img {
+    position: absolute;
+    height: 50px;
+    top: 230px;
+    left: 90px;
+}
+
+/* 公司介绍样式 结束 */
+/* 新闻中心样式 开始 */
+.xinwenzhongxin {
+    position: relative;
+    top: 110px;
+}
+
+.xinwenneirong {
+    width: 100%;
+    height: 680px;
+    position: relative;
+    overflow: hidden;
+}
+
+.xinwenzhongxin>h2 {
+    margin: 0 110px;
+    font-size: 40px;
+    font-weight: 400;
+    color: rgb(10, 61, 143);
+}
+
+.xinwenzhongxin>h2>span {
+    margin-left: 10px;
+    font-size: 28px;
+    font-weight: 400;
+    color: rgb(36, 37, 38, 0.6);
+}
+
+.xinwenzhanshi {
+    position: relative;
+    left: 0;
+    padding: 0;
+    height: 500px;
+    margin: 40px 0;
+    display: flex;
+    list-style: none;
+    /* overflow: hidden; */
+    width: 100%;
+    /* transform: translate(-200px,0); */
+}
+
+#xwl {
+    background: #0a3d8f;
+    border: 1px solid #0a3d8f;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 50px;
+    top: 35%;
+    z-index: 5;
+}
+
+#xwr {
+    /* display: none; */
+    background: #0a3d8f;
+    border: 1px solid #0a3d8f;
+    border-radius: 50%;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 50px;
+    top: 35%;
+    z-index: 5;
+}
+
+#xwl>img,
+#xwr>img {
+    margin-top: 3px;
+    margin-left: 2px;
+    width: 25px;
+    height: 25px;
+}
+
+.xinwenzhanshi>li {
+    margin: 0 0.5px;
+    padding: 30px;
+    background: white;
+    height: 405px;
+    position: relative;
+}
+
+.xinwenzhanshi>li>div {
+    width: 335px;
+    height: 280px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 30px;
+    margin: 0;
+}
+
+.xinwenzhanshi>li>h2 {
+    color: #0a3d8f;
+    margin: 0 auto;
+    font-size: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.xinwenzhanshi>li>h2>span {
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: black;
+}
+
+.xinwenzhanshi>li>h2>img {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+}
+
+.xinwenzhanshi>li p {
+    width: 335px;
+    height: 48px;
+    overflow: hidden;
+    font-size: 17px;
+}
+
+.xinwentu1 {
+    width: 500px;
+    height: 100%;
+    transform: translate(-17%, 0);
+}
+
+.xinwentu2 {
+    width: 100%;
+    transform: translate(0, -27%);
+}
+
+.xinwentu3 {
+    width: 135%;
+    height: 100%;
+    transform: translate(-13%, 0);
+}
+
+.xinwentu4 {
+    width: 140%;
+    height: 100%;
+    transform: translate(-14%, 0);
+}
+
+.xinwentu5 {
+    width: 120%;
+    height: 100%;
+    transform: translate(-8%, 0);
+}
+
+.xinwentu6 {
+    width: 118%;
+    height: 100%;
+    transform: translate(-8%, 0);
+}
+
+.xinwentu7 {
+    width: 100%;
+    transform: translate(0, -24%);
+}
+
+.xinwentu8 {
+    width: 100%;
+    transform: translate(0, -25%);
+}
+
+.xinwentu9 {
+    height: 100%;
+    width: 130%;
+    transform: translate(-11%, 0);
+}
+
+.xinwentu10 {
+    height: 100%;
+    width: 150%;
+    transform: translate(-17%, 0);
+}
+
+.xinwentu11 {
+    height: 100%;
+    width: 116%;
+    transform: translate(-7%, 0);
+}
+
+.xinwentu12 {
+    height: 150%;
+    width: 100%;
+    transform: translate(0, -16%);
+}
+
+/* 新闻中心样式 结束 */
+/* 招投标部分样式 开始 */
+.zhaotoubiaozhongxin {
+    background: url(../images/ztbzxbj.png);
+    background-size: 100%;
+    height: 380px;
+    margin-left: -8px;
+    margin-bottom: 400px;
+}
+
+.ztbjuti {
+    width: 1300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+    left: 0;
+    z-index: 3;
+}
+
+.ztbjuti>h2 {
+    width: 1300px;
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.ztbjuti>h2>div {
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.ztbjuti>h2>span {
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .6);
+    margin-left: 10px;
+}
+
+.ztbjuti>h2>div {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.ztbjuti>h2>div>div {
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+    font-weight: 300;
+    right: 0;
+}
+
+.ztbjuti>h2>div>div>a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 195px;
+}
+
+.ztbjuti>h2>div>div>a>img {
+    position: absolute;
+    right: 20px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.ztbnr {
+    position: relative;
+    top: 120px;
+    width: 1280px;
+    background: #fff;
+}
+
+.ztbnr>img {
+    display: inline;
+    width: 500px;
+    height: 335px;
+}
+
+.ztbnrjuti {
+    position: absolute;
+    width: 779.8px;
+    height: 290px;
+    right: 35px;
+    top: 30px;
+}
+
+.zbjt {
+    float: right;
+    /* height: 30px; */
+    padding: 8px;
+    width: 680px;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.zbjt>a {
+    position: relative;
+    width: 600px;
+    height: 60px;
+}
+
+.zbjt>a>div {
+    width: 680px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #E7E7E7;
+}
+
+.zbjt>a>div>div {
+    background: #C7A76A;
+    width: 52px;
+    height: 16px;
+    padding: 5px;
+    position: relative;
+    /* display: inline; */
+}
+
+.zbjt>a>div>div>img {
+    position: absolute;
+    top: 6px;
+    width: 15px;
+}
+
+.zbjt>a>div>div>p {
+    font-size: 10px;
+    position: absolute;
+    margin: 4px;
+    right: 0;
+    top: 2px;
+    color: #fff;
+}
+
+.zbjt>a>div>h2 {
+    font-size: 16px;
+    position: absolute;
+    left: 75px;
+    top: 2px;
+    margin: 0;
+}
+
+.zbjt>a>div>h2:hover {
+    cursor: pointer;
+    color: #6f6c6ca1;
+}
+
+.zbjt>a>div>span {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    font-size: 12px;
+    color: rgba(36, 37, 38, .6);
+}
+
+.ckgd {
+    position: absolute;
+    left: 95px;
+    bottom: 0;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #E7E7E7;
+}
+
+/* 招投标部分样式 结束 */
+/* 版权页样式 开始 */
+.copyright {
+    width: 100%;
+    background: #41464a;
+    height: 300px;
+    position: absolute;
+    bottom: -100px;
+    margin-left: -8px;
+    display: flex;
+    /* padding: 0; */
+}
+.copyright>div{
+    padding-top: 30px;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin: 0 auto;
+}
+.copyright a:hover {
+    color: #fff;
+}
+
+.xiangqing {
+    width: 300px;
+    /* position: relative; */
+    left: 100px;
+    top: 20px;
+}
+
+.xiangqing p {
+    position: relative;
+    color: hsla(0, 0%, 100%, .6);
+    font-size: 12px;
+    left: 22px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.xiangqing p>img {
+    position: absolute;
+    left: -25px;
+    /* height: 55px; */
+}
+
+.guanyu {
+    width: 150px;
+    position: relative;
+    /* top: -108px; */
+    /* left: 550px; */
+}
+
+.guanyu>h2 {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .9);
+}
+
+.guanyu>a {
+    width: 150px;
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, .6);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+
+.yewu {
+    position: relative;
+    /* left: 800px; */
+    /* top: -192px; */
+    width: 150px;
+}
+
+.yewu>a {
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, .6);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    width: 150px;
+}
+
+.yewu>h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .9);
+}
+
+.youqing {
+    position: relative;
+    /* left: 1100px; */
+    /* top: -319px; */
+    width: 150px;
+}
+
+.youqing>h2 {
+    width: 150px;
+    font-size: 16px;
+    font-weight: 400;
+    color: hsla(0, 0%, 100%, .9);
+}
+
+.youqing>a {
+    text-decoration: none;
+    color: hsla(0, 0%, 100%, .6);
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    width: 150px;
+}
+
+.beian {
+    position: absolute;
+    bottom: 0;
+    width: 80%;
+    text-align: center;
+}
+.beian div{
+    display: flex;
+    width: 100%;
+    margin: 0 14%;
+    /* margin: 0 auto; */
+    position: relative;
+    justify-content: center;
+    border-top: 1px solid hsla(0, 0%, 100%, .2);
+}
+.beian>div>p {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, .4);
+    
+}
+
+.beian>div>img {
+    position: absolute;
+    bottom: 10px;
+    left: 290px;
+    width: 25px;
+}
+
+/* 版权页样式 结束 */
