@@ -137,6 +137,11 @@ function swWeb(data) {
 			showWeb.attr("src", "./assets/menu/仿重庆政府/index.html");
 			showWeb.addClass("nav13");
 			break;
+		case "14":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/仿重庆百货首页/index.html");
+			showWeb.addClass("nav14");
+			break;
 	}
 }
 
