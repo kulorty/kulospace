@@ -142,6 +142,11 @@ function swWeb(data) {
 			showWeb.attr("src", "./assets/menu/仿重庆百货首页/index.html");
 			showWeb.addClass("nav14");
 			break;
+		case "15":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/金属/index.html");
+			showWeb.addClass("nav15");
+			break;
 	}
 }
 
