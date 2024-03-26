@@ -1,0 +1,35 @@
+html,body{
+    width: 100%;
+    /* min-width: 770px; */
+    position: relative;
+    font-family: "Microsoft YaHei";
+    color: #000000;
+    overflow-x:visible;
+}
+*{
+    margin: 0 auto;
+    font-size: 1vw;
+    padding: 0;
+}
+.fontb{
+    font-weight: bold;
+
+}
+.wap{
+    display: none;
+}
+a{
+    text-decoration: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.lbk{
+    display: inline-block;
+}
+li{
+    list-style: none;
+}
