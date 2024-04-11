@@ -147,6 +147,11 @@ function swWeb(data) {
 			showWeb.attr("src", "./assets/menu/金属/index.html");
 			showWeb.addClass("nav15");
 			break;
+		case "16":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/MIStoreLoginAndSignin/index.html");
+			showWeb.addClass("nav16");
+			break;
 	}
 }
 
