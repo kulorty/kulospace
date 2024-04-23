@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="shortcut icon" href="./assets/favicon.ico" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+	</head>
+	<body>
+		<div class="loading">
+			<img src="./assets/loading.gif" alt="" />
+			<h2>loading...</h2>
+		</div>
+		<div class="loaded">
+			<h2>加载完成</h2>
+			<button id="enterMain">GO</button>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="navlist">
+					<div id="nav">
+						<li id="slide1"></li>
+						<li id="slide2"></li>
+						<li class="navSelected" data-a="1">练习一：使用JavaScript程序打印图形</li>
+						<li data-a="2">第二课堂车机项目</li>
+						<li data-a="3">练习二：DOM图片操作</li>
+						<li data-a="4">练习三：坦克游戏</li>
+						<li data-a="5">练习四：广告</li>
+						<li data-a="6">作业四：JQuery修改表格</li>
+						<li data- a="7">练习五：页游逻辑</li>
+						<li data-a="8">练习六：插件的使用</li>
+						<li data-a="9">实验五：注册验证</li>
+						<li data-a="10">练习七：查看用户名是否存在</li>
+						<li data-a="11">小米商城手机板块</li>
+						<li data-a="12">仿腾讯新闻</li>
+						<li data-a="13">仿重庆政府</li>
+						<li data-a="14">仿重庆百货首页</li>
+						<li data-a="15">盈洪金属网页</li>
+						<li data-a="16">小米商城登录注册</li>
+						<li data-a="17">小米商城购物车</li>
+					</div>
+				</div>
+				<svg
+					t="1709226498231"
+					class="prev"
+					viewBox="0 0 1024 1024"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					p-id="1449"
+					width="200"
+					height="200"
+					onclick="prevPage()">
+					<path
+						d="M133 513.2c0 28.5 15.9 53.4 39.5 67l588.1 336.7c0.2 0.1 0.4 0.2 0.6 0.4l0.4 0.1c12 6.9 25.9 10.8 40.8 10.8 44.4 0 80.3-34.8 80.3-77.8V176c0-43-35.9-77.8-80.3-77.8-14.9 0-28.9 3.9-40.8 10.8l-0.4 0.2-0.6 0.3-588.2 336.7c-23.6 13.6-39.4 38.5-39.4 67z m0 0"
+						p-id="1450"></path>
+				</svg>
+				<svg
+					t="1709226498231"
+					class="next"
+					viewBox="0 0 1024 1024"
+					version="1.1"
+					xmlns="http://www.w3.org/2000/svg"
+					p-id="1449"
+					width="200"
+					height="200"
+					onclick="nextPage()">
+					<path
+						d="M133 513.2c0 28.5 15.9 53.4 39.5 67l588.1 336.7c0.2 0.1 0.4 0.2 0.6 0.4l0.4 0.1c12 6.9 25.9 10.8 40.8 10.8 44.4 0 80.3-34.8 80.3-77.8V176c0-43-35.9-77.8-80.3-77.8-14.9 0-28.9 3.9-40.8 10.8l-0.4 0.2-0.6 0.3-588.2 336.7c-23.6 13.6-39.4 38.5-39.4 67z m0 0"
+						p-id="1450"></path>
+				</svg>
+				<div class="showTheWeb">
+					<div class="preLoaded"></div>
+					<iframe src="./assets/menu/第一次作业.html" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<audio class="music" src="./assets/bgm.mp3" loop="loop"></audio>
+	</body>
+	<script src="./assets/js/jquery-3.7.1.min.js"></script>
+	<script src="./assets/js/index.js"></script>
+</html>
