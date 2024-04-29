@@ -157,6 +157,11 @@ function swWeb(data) {
 			showWeb.attr("src", "./assets/menu/MIStoreShoppingCart/index.html");
 			showWeb.addClass("nav17");
 			break;
+		case "18":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/eventBus/index.html");
+			showWeb.addClass("nav18");
+			break;
 	}
 }
 
