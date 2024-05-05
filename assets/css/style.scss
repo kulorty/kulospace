@@ -20,6 +20,13 @@ body {
 	width: 100%;
 	height: 100%;
 }
+.icon {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.15em;
+	fill: currentColor;
+	overflow: hidden;
+}
 .loading {
 	z-index: 50;
 	font-family: AaHongYunShouShu;
@@ -75,32 +82,63 @@ body {
 	background: url(../bk.png);
 	background-attachment: fixed;
 	background-position: center;
-	background-size: 130%;
+	background-size: 1580px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	.content {
-		width: 1240px;
+		min-width: 1240px;
 		display: flex;
 		padding: 40px 20px;
 		position: relative;
 		background: #ffffff60;
 		border-radius: 20px;
+		align-items: center;
 		svg {
 			position: absolute;
-			left: 145px;
+			// left: 145px;
 			height: 36px;
 			width: 36px;
 			cursor: pointer;
 			fill: #48fda3;
 		}
 		.prev {
-			top: 25px;
-			transform: rotate(90deg);
+			top: 18px;
+			left: 145px;
+			transform: rotate(180deg);
 		}
 		.next {
-			bottom: 25px;
-			transform: rotate(-90deg);
+			left: 145px;
+			bottom: 18px;
+		}
+		.seeOri {
+			z-index: 2;
+			position: absolute;
+			top: 0;
+			left: 560px;
+			width: 100px;
+			background: #ffffff9f;
+			height: 38px;
+			border-radius: 0 0 60% 60%;
+			div {
+				svg {
+					top: 0;
+					left: 32px;
+					position: relative;
+				}
+			}
+			div:hover::before {
+				top: 10px;
+				left: 15px;
+				position: absolute;
+				content: "查看原始网页";
+				color: #22cf79;
+				font-size: 12px;
+				white-space: nowrap;
+			}
+			div:hover svg {
+				display: none;
+			}
 		}
 		.navlist {
 			// filter: blur(10px);

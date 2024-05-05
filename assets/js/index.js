@@ -1,3 +1,4 @@
+var address = "";
 //页面加载完成后进行跳转
 window.onload = function () {
 	var enterMain = $("#enterMain");
@@ -25,6 +26,7 @@ window.onload = function () {
 			loaded.css("display", "none");
 		}, 500);
 	});
+	address = "./assets/menu/第一次作业.html";
 };
 
 //项目展示标题的选择切换
@@ -77,89 +79,107 @@ function swWeb(data) {
 		case "1":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/第一次作业.html");
+			address = "./assets/menu/第一次作业.html";
 			showWeb.addClass("nav1");
 			break;
 		case "2":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/第二课堂项目/index.html");
+			address = "./assets/menu/第二课堂项目/index.html";
 			showWeb.addClass("nav2");
 			break;
 		case "3":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/DOM图片操作/task05.html");
+			address = "./assets/menu/DOM图片操作/task05.html";
 			showWeb.addClass("nav3");
 			break;
 		case "4":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/坦克游戏/task3.html");
+			address = "./assets/menu/坦克游戏/task3.html";
 			showWeb.addClass("nav4");
 			break;
 		case "5":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/广告实验/index.html");
+			address = "./assets/menu/广告实验/index.html";
 			showWeb.addClass("nav5");
 			break;
 		case "6":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/jQuery操作/task4.html");
+			address = "./assets/menu/jQuery操作/task4.html";
 			showWeb.addClass("nav6");
 			break;
 		case "7":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/页游逻辑/index.html");
+			address = "./assets/menu/页游逻辑/index.html";
 			break;
 		case "8":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/插件/index.html");
+			address = "./assets/menu/插件/index.html";
 			break;
 		case "9":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/注册页面/index.html");
+			address = "./assets/menu/注册页面/index.html";
 			showWeb.addClass("nav9");
 			break;
 		case "10":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/用户名查询.html");
+			address = "./assets/menu/用户名查询.html";
 			showWeb.addClass("nav10");
 			break;
 		case "11":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/小米商城手机板块/index.html");
+			address = "./assets/menu/小米商城手机板块/index.html";
 			showWeb.addClass("nav11");
 			break;
 		case "12":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/腾讯新闻/index.html");
+			address = "./assets/menu/腾讯新闻/index.html";
 			showWeb.addClass("nav12");
 			break;
 		case "13":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/仿重庆政府/index.html");
+			address = "./assets/menu/仿重庆政府/index.html";
 			showWeb.addClass("nav13");
 			break;
 		case "14":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/仿重庆百货首页/index.html");
+			address = "./assets/menu/仿重庆百货首页/index.html";
 			showWeb.addClass("nav14");
 			break;
 		case "15":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/金属/index.html");
+			address = "./assets/menu/金属/index.html";
 			showWeb.addClass("nav15");
 			break;
 		case "16":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/MIStoreLoginAndSignin/index.html");
+			address = "./assets/menu/MIStoreLoginAndSignin/index.html";
 			showWeb.addClass("nav16");
 			break;
 		case "17":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/MIStoreShoppingCart/index.html");
+			address = "./assets/menu/MIStoreShoppingCart/index.html";
 			showWeb.addClass("nav17");
 			break;
 		case "18":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/eventBus/index.html");
+			address = "./assets/menu/eventBus/index.html";
 			showWeb.addClass("nav18");
 			break;
 	}
@@ -185,4 +205,9 @@ function prevPage() {
 	} else {
 		nav.css("top", "0px");
 	}
+}
+
+function toOri() {
+	window.open(address);
+	console.log(address);
 }

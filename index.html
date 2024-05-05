@@ -6,6 +6,7 @@
 		<title>Document</title>
 		<link rel="shortcut icon" href="./assets/favicon.ico" />
 		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script src="./assets/iconfont/iconfont.js"></script>
 	</head>
 	<body>
 		<div class="loading">
@@ -42,34 +43,20 @@
 						<li data-a="18">eventBus组件通信</li>
 					</div>
 				</div>
-				<svg
-					t="1709226498231"
-					class="prev"
-					viewBox="0 0 1024 1024"
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					p-id="1449"
-					width="200"
-					height="200"
-					onclick="prevPage()">
-					<path
-						d="M133 513.2c0 28.5 15.9 53.4 39.5 67l588.1 336.7c0.2 0.1 0.4 0.2 0.6 0.4l0.4 0.1c12 6.9 25.9 10.8 40.8 10.8 44.4 0 80.3-34.8 80.3-77.8V176c0-43-35.9-77.8-80.3-77.8-14.9 0-28.9 3.9-40.8 10.8l-0.4 0.2-0.6 0.3-588.2 336.7c-23.6 13.6-39.4 38.5-39.4 67z m0 0"
-						p-id="1450"></path>
+				<svg class="icon prev" aria-hidden="true" onclick="prevPage()">
+					<use xlink:href="#icon-xiala"></use>
 				</svg>
-				<svg
-					t="1709226498231"
-					class="next"
-					viewBox="0 0 1024 1024"
-					version="1.1"
-					xmlns="http://www.w3.org/2000/svg"
-					p-id="1449"
-					width="200"
-					height="200"
-					onclick="nextPage()">
-					<path
-						d="M133 513.2c0 28.5 15.9 53.4 39.5 67l588.1 336.7c0.2 0.1 0.4 0.2 0.6 0.4l0.4 0.1c12 6.9 25.9 10.8 40.8 10.8 44.4 0 80.3-34.8 80.3-77.8V176c0-43-35.9-77.8-80.3-77.8-14.9 0-28.9 3.9-40.8 10.8l-0.4 0.2-0.6 0.3-588.2 336.7c-23.6 13.6-39.4 38.5-39.4 67z m0 0"
-						p-id="1450"></path>
+				<svg class="icon next" aria-hidden="true" onclick="nextPage()">
+					<use xlink:href="#icon-xiala"></use>
 				</svg>
+				<div class="seeOri">
+					<div onclick="toOri()">
+						<svg class="icon" aria-hidden="true" alt="查看原始网页">
+							<use xlink:href="#icon-chakan"></use>
+						</svg>
+					</div>
+				</div>
+
 				<div class="showTheWeb">
 					<div class="preLoaded"></div>
 					<iframe src="./assets/menu/第一次作业.html" frameborder="0"></iframe>
