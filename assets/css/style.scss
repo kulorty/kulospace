@@ -43,25 +43,35 @@ body {
 	justify-content: center;
 	align-items: center;
 	.loader {
-		width: fit-content;
 		font-weight: bold;
 		font-family: monospace;
-		white-space: pre;
 		font-size: 30px;
-		line-height: 1.2em;
-		height: 1.2em;
-		overflow: hidden;
+		display: inline-grid;
 	}
-	.loader:before {
-		content: "Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔";
-		white-space: pre;
-		display: inline-block;
-		animation: l39 1s infinite steps(11) alternate;
+	.loader:before,
+	.loader:after {
+		content: "Loading...";
+		grid-area: 1/1;
+		line-height: 1em;
+		// -webkit-mask: linear-gradient(90deg, #000 50%, #0000 0) 0 50%/2ch 100%;
+		// -webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+		animation: l30 2s infinite;
 	}
-
-	@keyframes l39 {
+	.loader:after {
+		--s: -1;
+	}
+	@keyframes l30 {
+		33% {
+			transform: translateY(calc(var(--s, 1) * 50%));
+			-webkit-mask-position: calc(var(--s, 0) * 1ch) 50%;
+		}
+		66% {
+			transform: translateY(calc(var(--s, 1) * 50%));
+			-webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
+		}
 		100% {
-			transform: translateY(-100%);
+			transform: translateY(calc(var(--s, 1) * 0%));
+			-webkit-mask-position: calc(var(--s, 0) * 1ch + 1ch) 50%;
 		}
 	}
 }
