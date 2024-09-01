@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="shortcut icon" href="./assets/favicon.ico" />
+		<link rel="stylesheet" href="./assets/css/style.css" />
+		<script src="./assets/iconfont/iconfont.js"></script>
+	</head>
+	<body>
+		<div class="loading">
+			<div class="loader"></div>
+		</div>
+		<div class="loaded">
+			<h2>加载完成</h2>
+			<button id="enterMain">GO</button>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="navlist">
+					<div id="nav">
+						<li id="slide1"></li>
+						<li id="slide2"></li>
+						<li data-a="2">第二课堂车机项目</li>
+						<li data-a="9">实验五：注册验证</li>
+						<li data-a="11">小米商城手机板块</li>
+						<li data-a="12">仿腾讯新闻</li>
+						<li data-a="13">仿重庆政府</li>
+						<li data-a="14">仿重庆百货首页</li>
+						<li data-a="15">盈洪金属网页</li>
+						<li data-a="16">小米商城登录注册</li>
+						<li data-a="17">小米商城购物车</li>
+					</div>
+				</div>
+				<svg class="icon prev" aria-hidden="true" onclick="prevPage()">
+					<use xlink:href="#icon-xiala"></use>
+				</svg>
+				<svg class="icon next" aria-hidden="true" onclick="nextPage()">
+					<use xlink:href="#icon-xiala"></use>
+				</svg>
+				<div class="seeOri">
+					<div onclick="toOri()">
+						<svg class="icon" aria-hidden="true" alt="查看原始网页">
+							<use xlink:href="#icon-chakan"></use>
+						</svg>
+					</div>
+				</div>
+
+				<div class="showTheWeb">
+					<div class="preLoaded"></div>
+					<iframe class="nav2" src="./assets/menu/第二课堂项目/index.html" frameborder="0"></iframe>
+				</div>
+			</div>
+		</div>
+		<audio class="music" src="./assets/bgm.mp3" loop="loop"></audio>
+	</body>
+	<script src="./assets/js/jquery-3.7.1.min.js"></script>
+	<script src="./assets/js/index.js"></script>
+</html>
