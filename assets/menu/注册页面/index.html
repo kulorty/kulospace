@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="content">
+        <form id="myform">
+            <ul id="jindutiao">
+                <li class="active">账号设置</li>
+                <li>账号绑定</li>
+                <li>个人信息设置</li>
+            </ul>
+            <fieldset>
+                <h2 class="tishi1">创建你的账号</h2>
+                <h3 class="tishi2">你的一切从这里开始</h3>
+                <input type="text" placeholder="用户名" name="username" class="username" />
+                <input type="password" placeholder="密码，长度在6-12位" name="password" class="password" />
+                <input type="password" placeholder="确认密码" name="passwordcon" class="password" />
+                <input type="button" value="下一步" class="next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="tishi1">绑定你的账号</h2>
+                <h3 class="tishi2">关联相关信息用于后续验证和信息保护</h3>
+                <input type="text" placeholder="邮箱" name="email" class="email" />
+                <input type="text" placeholder="手机号" name="phone" class="phone" />
+                <input type="button" value="上一步" class="previous" />
+                <input type="button" value="下一步" class="next" />
+            </fieldset>
+            <fieldset>
+                <h2 class="tishi1">填写你的个人信息</h2>
+                <h3 class="tishi2">个人信息会被加密保存，请放心填写</h3>
+                <input type="text" placeholder="昵称" name="nickname" class="nickname" />
+                <input type="text" placeholder="性别" name="sex" class="sex" />
+                <input type="text" placeholder="年龄" name="age" class="age" />
+                <input type="button" value="上一步" class="previous" />
+                <input type="button" value="提交" class="submit" />
+            </fieldset>
+            <fieldset>
+                <h2 class="tishi1">注册成功</h2>
+                <h3 class="tishi2">你的账号已经创建成功</h3>
+                <input type="button" value="确定" class="confirm" />
+            </fieldset>
+        </form>
+    </div>
+    <script src="jquery-3.7.0.min.js"></script>
+    <script src="jquery.easing.min.js"></script>
+    <script src="jquery.validate.js"></script>
+    <script>
+        var next, previous;
+        var left, opacity, scale;
+        var animating;
+        var dangqian = $(this).parent();
+
+        // 添加自定义验证方法，验证密码是否符合要求——包含大写字母、小写字母和数字
+        $.validator.addMethod('passwordRequirements', function (value, element) {
+            var Regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).+$/;
+            return this.optional(element) ||
+                (Regex.test(value));
+        },);
+
+        // 添加自定义验证方法，验证输入是否是限定的字符——只能为男或女
+        $.validator.addMethod('limitedChars', function (value, element, param) {
+            var validChars = param.split('|');
+            return this.optional(element) || validChars.indexOf(value) !== -1;
+        }, '必须是有效的性别');
+
+        // 使用jQuery的validate插件对表单进行验证
+        $('#myform').validate({
+            rules: {
+                username: 'required',//用户名
+                password: {//密码
+                    required: true,
+                    rangelength: [6, 12],
+                    passwordRequirements: true
+                },
+                passwordcon: {//确认密码
+                    required: true,
+                    equalTo: "input[name=password]"
+                },
+                email: {//邮箱
+                    required: true,
+                    email: true
+                },
+                phone: {//手机号码
+                    required: true,
+                    number: true,
+                    digits: true,
+                    rangelength: [8, 12]
+                },
+                nickname: {//昵称
+                    required: true,
+                    rangelength: [2, 10]
+                },
+                sex: {//性别
+                    required: true,
+                    limitedChars: '男|女'
+                },
+                age: {//年龄
+                    required: true,
+                    number: true,
+                    digits: true,
+                    range: [1, 100]
+                },
+            },
+            // 错误提示信息
+            messages: {
+                username: {//用户名
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请填写用户名</span>'
+                },
+                password: {//密码
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入密码</span>',
+                    rangelength: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">密码长度为6-12位</span>',
+                    passwordRequirements: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">密码必须包含大写字母、小写字母和数字</span>'
+                },
+                //确认密码
+                passwordcon: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请再次刚才的密码</span>',
+                email: {//邮箱
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入邮箱地址</span>',
+                    email: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入正确的邮箱格式</span>'
+                },
+                phone: {//手机号码
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入手机号码</span>',
+                    number: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入正确的手机号码格式</span>',
+                    digits: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入正确的手机号码格式</span>',
+                    rangelength: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">手机号码长度为8-12位</span>'
+                },
+                nickname: {//昵称
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入昵称</span>',
+                    rangelength: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">昵称长度为2-10位</span>'
+                },
+                sex: {//性别
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入性别</span>',
+                    limitedChars: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">性别只能为男或女</span>'
+                },
+                age: {//年龄
+                    required: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入年龄</span>',
+                    number: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入正确的年龄格式</span>',
+                    digits: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">请输入正确的年龄格式</span>',
+                    range: '<span class="error-message"><img src="images/error.png" style="width: 15px;height: 15px;" class="errorp">年龄范围为1-100</span>'
+                }
+            }
+        });
+
+        //点击下一步按钮时进行的操作
+        $('.next').click(function () {
+            if (animating) {//如果正在进行动画，则返回false，不执行下面的操作
+                return false;
+            }
+            //验证表单是否填写正确
+            var isValid = $('#myform').valid();
+            if (!isValid) {//如果填写有误，禁用下一步按钮
+                $(this).prop('disabled', true);
+                //抖动警告
+                $('#myform').animate({ left: '+=10px' }, 80, 'easeOutBounce')
+                    .animate({ left: '-=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '+=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '-=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '+=10px' }, 80, 'easeOutBounce', function () {
+                        //回复按钮的使用
+                        $('.next').prop('disabled', false);
+                    });
+                return false;
+            }
+            //如果填写正确，进行翻页动画到下一步
+            animating = true;
+            var dangqian = $(this).parent();
+            next = dangqian.next();
+            //进度条样式变化
+            $('#jindutiao li').eq($('fieldset').index(next)).addClass('active');
+            next.show();
+            //翻页动画，进入到下一步的页面
+            dangqian.animate({ opacity: 0 }, {
+                step: function (now, mx) {
+                    scale = 1 - (1 - now) * 0.2;
+                    left = now * 50 + '%';
+                    opacity = 1 - now;
+                    dangqian.css({ 'transform': 'scale(' + scale + ')' });
+                    next.css({
+                        'left': left,
+                        'opacity': opacity
+                    });
+                },
+                duration: 800,//动画持续时间
+                //动画完成后的操作
+                complete: function () {
+                    dangqian.hide();//隐藏当前页面
+                    animating = false;
+                    $('.next').prop('disabled', false);//使按钮可用
+                },
+                easing: 'easeInOutBack'//使用jQuery Easing插件的easeInOutBack效果
+            });
+        });
+
+        //点击上一步按钮时进行的操作
+        $('.previous').click(function () {
+            if (animating)
+                return false;
+            animating = true;
+            dangqian = $(this).parent();
+            previous = $(this).parent().prev();
+            //进度条样式变化
+            $('#jindutiao li').eq($('fieldset').index(dangqian)).removeClass('active');
+            previous.show();
+            //翻页动画，进入到上一步的页面
+            dangqian.animate({ opacity: 0 }, {
+                step: function (now, mx) {
+                    scale = 0.8 + (1 - now) * 0.2;
+                    left = (1 - now) * 50 + '%';
+                    opacity = 1 - now;
+                    dangqian.css({ 'left': left });
+                    previous.css({
+                        'transform': 'scale(' + scale + ')',
+                        'opacity': opacity
+                    });
+                },
+                duration: 800,
+                //动画完成后隐藏之前的页面
+                complete: function () {
+                    dangqian.hide();
+                    animating = false;
+                },
+                easing: 'easeInOutBack'//使用jQuery Easing插件的easeInOutBack效果
+            });
+        });
+
+        //点击提交按钮时进行的操作
+        $('.submit').click(function () {
+            var isValid = $('#myform').valid();//验证表单是否填写正确
+            if (!isValid) {//如果填写有误，禁用提交按钮并抖动警告
+                $(this).prop('disabled', true);
+                $('#myform').animate({ left: '+=10px' }, 80, 'easeOutBounce')
+                    .animate({ left: '-=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '+=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '-=20px' }, 80, 'easeOutBounce')
+                    .animate({ left: '+=10px' }, 80, 'easeOutBounce', function () {
+                        $('.submit').prop('disabled', false);
+                    });
+                return false;
+            }
+            //如果填写正确，进行翻页动画到下一步
+            animating = true;
+            var dangqian = $(this).parent();
+            next = dangqian.next();
+            $('#jindutiao').hide();//隐藏进度条
+            next.show();//显示下一步的页面
+            dangqian.animate({ opacity: 0 }, {//翻页动画
+                step: function (now, mx) {
+                    scale = 1 - (1 - now) * 0.2;
+                    left = now * 50 + '%';
+                    opacity = 1 - now;
+                    dangqian.css({ 'transform': 'scale(' + scale + ')' });
+                    next.css({
+                        'left': left,
+                        'opacity': opacity
+                    });
+                },
+                duration: 800,
+                //动画完成后的操作,隐藏之前的页面，出现提交成功的页面
+                complete: function () {
+                    dangqian.hide();
+                    animating = false;
+                    $('.next').prop('disabled', false);
+                },
+                easing: 'easeInOutBack'//使用jQuery Easing插件的easeInOutBack效果
+            });
+        });
+
+        //注册成功后点击确定按钮时进行的操作
+        $('.confirm').click(function () {
+            window.location.reload();//刷新页面
+        });
+    </script>
+</body>
+
+</html>

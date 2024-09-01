@@ -1,0 +1,51 @@
+* {
+	margin: 0 auto;
+	padding: 0px;
+}
+ul,
+li {
+	list-style: none;
+}
+a {
+	color: #a8a8a8;
+	text-decoration: none;
+}
+a:hover {
+	color: #f00;
+}
+body {
+	font-family: "宋体";
+	font-size: 14px;
+	color: #333;
+}
+.f_left {
+	float: left;
+}
+.f_right {
+	float: right;
+}
+.f_clear {
+	clear: both;
+}
+#container {
+	overflow: hidden;
+	width: 347px;
+	height: 251px;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+.da{
+	font-family: "黑体";
+	font-size: 30px;
+	color:#354577;
+}
+.xiao{
+	font-family: "黑体";
+	font-size: 20px;
+	color:#354577;
+}
+.shu{
+	font-family: "微软雅黑";
+	font-size: 16px;
+	color: #122249;
+}
