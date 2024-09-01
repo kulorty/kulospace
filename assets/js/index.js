@@ -26,7 +26,7 @@ window.onload = function () {
 			loaded.css("display", "none");
 		}, 500);
 	});
-	address = "./assets/menu/第一次作业.html";
+	address = "./assets/menu/第二课堂项目/index.html";
 };
 
 //项目展示标题的选择切换
