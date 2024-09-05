@@ -26,7 +26,7 @@ window.onload = function () {
 			loaded.css("display", "none");
 		}, 500);
 	});
-	address = "./assets/menu/第二课堂项目/index.html";
+	address = "./assets/menu/vueNovel/index.html";
 };
 
 //项目展示标题的选择切换
@@ -76,6 +76,12 @@ showWeb.on("load", function () {
 
 function swWeb(data) {
 	switch (data) {
+		case "1":
+			showWeb.removeClass();
+			showWeb.attr("src", "./assets/menu/vueNovel/index.html");
+			address = "./assets/menu/vueNovel/index.html";
+			showWeb.addClass("nav1");
+			break;
 		case "2":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/第二课堂项目/index.html");
@@ -83,12 +89,6 @@ function swWeb(data) {
 			showWeb.addClass("nav2");
 			break;
 
-		case "9":
-			showWeb.removeClass();
-			showWeb.attr("src", "./assets/menu/注册页面/index.html");
-			address = "./assets/menu/注册页面/index.html";
-			showWeb.addClass("nav9");
-			break;
 		case "10":
 			showWeb.removeClass();
 			showWeb.attr("src", "./assets/menu/用户名查询.html");
